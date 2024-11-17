@@ -15,11 +15,9 @@ const Footer = () => {
             <input
               type='text'
               placeholder='Search...'
-              className='input rounded-none input-bordered focus:outline-none max-w-xs'
+              className='input rounded-none input-bordered focus:outline-none w-full'
             />
-            <button className='btn btn-primary rounded-none max-w-xs'>
-              Search
-            </button>
+            <button className='btn btn-primary rounded-none'>Search</button>
           </div>
         </div>
 
