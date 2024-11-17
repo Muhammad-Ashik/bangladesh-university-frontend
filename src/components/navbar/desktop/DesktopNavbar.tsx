@@ -33,19 +33,23 @@ const DesktopNavBar = () => (
       <li>
         <Link
           href='#'
-          className='py-2 px-3 text-md text-white bg-main rounded-md border border-transparent hover:text-main hover:border-main hover:bg-white'
+          className='py-2 px-3 text-sm text-white bg-main border border-transparent hover:text-main hover:border-main hover:bg-white'
         >
           Online Portal
         </Link>
       </li>
     </ul>
-    <label className='input input-bordered flex items-center gap-2 bg-white rounded-full'>
-      <input type='text' className='' placeholder='Search' />
+    <label className='input input-bordered focus:!outline-none text-slate-500  border-slate-400 flex items-center gap-2 bg-white rounded-full'>
+      <input
+        type='text'
+        className='placeholder-slate-500 focus:!outline-none'
+        placeholder='Search'
+      />
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 16 16'
         fill='currentColor'
-        className='h-5 w-5 text-gray-400'
+        className='h-5 w-5 text-slate-500'
       >
         <path
           fillRule='evenodd'
