@@ -19,7 +19,7 @@ const DesktopNavBar = () => (
     </div>
     <ul className='flex items-center space-x-5 md:space-x-6'>
       <li>
-        <Link href='#' className='text-darkTwo text-sm hover:text-main'>
+        <Link href='#' className='text-secondary text-sm hover:text-primary'>
           Home
         </Link>
       </li>
@@ -27,14 +27,14 @@ const DesktopNavBar = () => (
         <Dropdown key={index} label={dropdown.label} items={dropdown.items} />
       ))}
       <li>
-        <Link href='#' className='text-darkTwo text-sm hover:text-main'>
+        <Link href='#' className='text-secondary text-sm hover:text-primary'>
           Certificate
         </Link>
       </li>
       <li>
         <Link
           href='#'
-          className='py-2 px-3 text-md text-white bg-main rounded-md border border-transparent hover:text-main hover:border-main hover:bg-white'
+          className='py-2 px-3 text-md text-white bg-primary rounded-md border border-transparent hover:text-primary hover:border-primary hover:bg-white'
         >
           Online Portal
         </Link>
