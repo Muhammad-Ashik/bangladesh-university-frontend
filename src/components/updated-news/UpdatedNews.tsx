@@ -51,8 +51,8 @@ export default function UpdatedNews() {
   }
 
   return (
-    <div className='w-full flex flex-col items-center my-10'>
-      <div className='max-w-[1020px] p-4'>
+    <div className='md:container w-full flex flex-col items-center my-10 mx-auto md:px-0 px-4'>
+      <div className='p-4'>
         <h2 className='text-[40px] text-darkTwo font-bold text-center xs:text-2xl md:text-3xl xl:text-[40px]'>
           Updated News
         </h2>

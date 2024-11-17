@@ -9,14 +9,14 @@ import React, {ReactElement} from 'react'
 
 interface NavigationItem {
   title: string
-  icons: ReactElement // Ensures the icons are valid React elements
+  icon: ReactElement // Ensures the icons are valid React elements
 }
 
 // Data Array
 export const HomeSubNavigationData: NavigationItem[] = [
-  {title: 'Library', icons: <LibraryIcon />},
-  {title: 'Lab Facility', icons: <LabFacilityIcon />},
-  {title: 'Research', icons: <ResearchIcon />},
-  {title: 'Digital Education', icons: <DigitalEducationIcon />},
-  {title: 'Co-curricular', icons: <CoCurricularIcon />},
+  {title: 'Library', icon: <LibraryIcon />},
+  {title: 'Lab Facility', icon: <LabFacilityIcon />},
+  {title: 'Research', icon: <ResearchIcon />},
+  {title: 'Education', icon: <DigitalEducationIcon />},
+  {title: 'Co-curricular', icon: <CoCurricularIcon />},
 ]
