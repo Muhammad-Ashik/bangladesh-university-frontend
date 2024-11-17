@@ -6,24 +6,24 @@ export default function CarouselCard({data, index}: CarouselCardProps) {
   return (
     <div className='flex flex-wrap justify-center gap-5 lg:mx-4 xs:mx-1 sm:mx-2 xs:gap-2'>
       <div
-        className='max-w-[440px] xl:h-[500px] flex xs:flex-col xs:items-center shadow-lg rounded-md border xs:h-auto xs:w-[95%] sm:w-full lg:h-[450px]'
+        className='w-full flex xs:flex-col xs:items-center shadow-lg rounded-md border'
         key={index}
       >
-        <Image
-          className='w-full h-[60%] object-cover rounded-t-md sm:h-1/2 lg:h-[65%]'
-          src={data.imageURL}
-          width={400}
-          height={350}
-          alt={data.title}
-        />
-        <div className='w-4/6 xs:w-full xs:px-2 lg:px-4 xl:px-6'>
-          <h3 className='py-4 font-bold text-xl text-darkTwo xs:text-xs xs:text-left sm:text-lg sm:leading-6 md:text-lg lg:text-xl lg:leading-9'>
-            {data.title}
-          </h3>
+        <div className='w-full'>
+          <Image
+            className='object-cover  rounded-t-md'
+            src={data.imageURL}
+            width={300}
+            height={250}
+            alt={data.title}
+          />
+        </div>
+        <div className=''>
+          <h3 className='font-bold text-darkTwo xs:text-left'>{data.title}</h3>
           <div className='flex xs:flex-col sm:flex-row items-center justify-between'>
             <Link
               href={data.link}
-              className='text-main text-[16px] font-bold flex text-nowrap items-center xs:text-xs sm:text-sm lg:text-[16px]'
+              className='text-main flex text-nowrap items-center text-sm'
             >
               {data.ButtonText}
               <svg
@@ -42,7 +42,7 @@ export default function CarouselCard({data, index}: CarouselCardProps) {
                 />
               </svg>
             </Link>
-            <span className='flex text-nowrap items-center text-sm text-main xs:text-xs xs:mt-1 xs:mb-4 sm:text-sm sm:mt-0 sm:mb-0 lg:text-[16px]'>
+            <span className='flex text-nowrap items-center text-sm text-main xs:mt-1 xs:mb-4 sm:mt-0 sm:mb-0'>
               {data.date}
               <svg
                 className='w-3.5 h-3.5 ml-2 text-main sm:hidden md:block'
