@@ -39,7 +39,7 @@ const DesktopNavBar = () => (
         </Link>
       </li>
     </ul>
-    <label className='input input-bordered focus:!outline-none text-slate-500  border-slate-400 flex items-center gap-2 bg-white rounded-full'>
+    <label className='input h-10 input-bordered focus:!outline-none text-slate-500  border-slate-400 flex items-center gap-2 bg-white rounded-full'>
       <input
         type='text'
         className='placeholder-slate-500 focus:!outline-none'
