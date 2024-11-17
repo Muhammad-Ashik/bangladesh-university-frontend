@@ -28,7 +28,7 @@ const MobileNavBar = () => (
         priority
       />
     </Link>
-    <label className='input max-h-10 max-w-52 input-bordered focus:!outline-none text-slate-500  border-slate-400 flex items-center gap-2 bg-white rounded-full'>
+    <label className='input max-h-9 max-w-44 input-bordered focus:!outline-none text-slate-500  border-slate-400 flex items-center gap-2 bg-white rounded-full'>
       <input
         type='text'
         className='placeholder-slate-500 w-[calc(100%-10px)] focus:!outline-none'

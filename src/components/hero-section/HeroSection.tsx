@@ -38,7 +38,7 @@ const HeroSection = () => {
         autoSlide={true}
         autoSlideInterval={5000}
         autoSlideSpeed={1000}
-        itemClassName='w-full relative h-[calc(100vh-650px)] md:h-[calc(100vh-80px)]'
+        itemClassName='w-full relative h-[calc(100vh-250px)] md:h-[calc(100vh-80px)]'
       />
     </div>
   )
