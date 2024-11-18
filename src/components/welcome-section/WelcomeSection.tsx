@@ -4,7 +4,7 @@ import Button from '../button/Button'
 
 export default function WelcomeSection() {
   return (
-    <div className='max-w-[1400px] w-full mx-auto flex justify-between items-center gap-6 xs:flex-wrap xs:p-4 xs:justify-center lg:p-0 xl:justify-between xl:mx-auto xl:flex-nowrap'>
+    <div className='mb-20 max-w-[1400px] w-full mx-auto flex justify-between items-center gap-6 xs:flex-wrap xs:p-4 xs:justify-center lg:p-0 xl:justify-between xl:mx-auto xl:flex-nowrap'>
       <Image
         className='max-h-[510px] xl:w-[40%] xs:max-w-[95%]'
         src={WelcomeImage}
