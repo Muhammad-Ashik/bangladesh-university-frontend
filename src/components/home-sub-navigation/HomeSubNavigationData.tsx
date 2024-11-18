@@ -1,11 +1,11 @@
+import {ReactElement} from 'react'
 import {
-  LibraryIcon,
-  LabFacilityIcon,
-  ResearchIcon,
-  DigitalEducationIcon,
   CoCurricularIcon,
+  DigitalEducationIcon,
+  LabFacilityIcon,
+  LibraryIcon,
+  ResearchIcon,
 } from './HomeSubNavigationIcons'
-import React, {ReactElement} from 'react'
 
 interface NavigationItem {
   title: string

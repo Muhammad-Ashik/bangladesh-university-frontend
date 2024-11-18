@@ -14,6 +14,7 @@ interface CarouselProps {
   autoSlide?: boolean
   autoSlideInterval?: number
   autoSlideSpeed?: number
+  itemClassName?: string
 }
 
 const Carousel: React.FC<CarouselProps> = ({
@@ -26,6 +27,7 @@ const Carousel: React.FC<CarouselProps> = ({
   autoSlide = false,
   autoSlideInterval = 3000,
   autoSlideSpeed = 500,
+  itemClassName,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [dragging, setDragging] = useState(false)
@@ -104,7 +106,7 @@ const Carousel: React.FC<CarouselProps> = ({
             className='flex-shrink-0 w-full'
             style={{pointerEvents: dragging ? 'none' : 'auto'}}
           >
-            {item}
+            <div className={`${itemClassName}`}>{item}</div>
           </div>
         ))}
       </div>

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Carousel from '../carousel/Carousel'
 
 const items = [
-  <div key='nature-water' className='relative w-full h-screen'>
+  <div key='nature-water'>
     <Image
       layout='fill'
       src='/images/c1.jpg'
@@ -12,7 +12,7 @@ const items = [
       style={{objectFit: 'cover'}}
     />
   </div>,
-  <div key='nature-forest' className='relative w-full h-screen'>
+  <div key='nature-forest'>
     <Image
       layout='fill'
       src='/images/c2.jpg'
@@ -20,7 +20,7 @@ const items = [
       style={{objectFit: 'cover'}}
     />
   </div>,
-  <div key='nature-mountain' className='relative w-full h-screen'>
+  <div key='nature-mountain'>
     <Image
       layout='fill'
       src='/images/c3.jpg'
@@ -38,6 +38,7 @@ const HeroSection = () => {
         autoSlide={true}
         autoSlideInterval={5000}
         autoSlideSpeed={1000}
+        itemClassName='w-full relative h-[calc(100vh-250px)] md:h-[calc(100vh-80px)]'
       />
     </div>
   )
