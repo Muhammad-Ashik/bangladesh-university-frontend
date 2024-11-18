@@ -3,7 +3,7 @@ import {homeSubNavigationData} from './homeSubNavigationData'
 
 export default function HomeSubNavigation() {
   return (
-    <div className='w-full flex gap-4 items-center justify-center mb-20 xs:flex-wrap xs:px-2 xs:gap-3 sm:gap-4'>
+    <div className='container mx-auto grid grid-cols-5 gap-4 mb-20 xs:px-2'>
       {homeSubNavigationData.map((data, index) => (
         <Link
           href=''
