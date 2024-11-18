@@ -52,7 +52,7 @@ export default function UpdatedNews() {
   return (
     <div className='md:container w-full flex flex-col items-center my-20 mx-auto md:px-5'>
       <div className='p-4'>
-        <h2 className=' text-secondary font-bold text-center xs:text-2xl md:text-3xl xl:text-4xl'>
+        <h2 className=' text-secondary font-bold text-center xs:text-2xl md:text-3xl'>
           Updated News
         </h2>
         <p className='py-4 text-secondary text-center'>
@@ -61,7 +61,7 @@ export default function UpdatedNews() {
           justo lobortis purus odio lectus urna, in aliquam.
         </p>
       </div>
-      <div className='relative max-w-full px-7 2xl:max-w-[1300px] mb-10'>
+      <div className='relative max-w-full px-7 2xl:max-w-[1300px] mb-5 sm:mb-10'>
         <Slider ref={sliderRef} {...settings}>
           {CarouselData.map((data, index) => (
             <CarouselCard data={data} index={index} key={index} />
