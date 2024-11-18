@@ -47,7 +47,7 @@ const MobileDrawer = () => (
         <li>
           <Link
             href='#'
-            className='py-2 text-md text-white bg-main rounded-md border border-transparent hover:text-main hover:border-main hover:bg-white'
+            className='py-2 text-md text-white bg-primary rounded-md border border-transparent hover:text-primary hover:border-primary hover:bg-white'
           >
             Online Portal
           </Link>

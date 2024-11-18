@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import {CarouselCardProps} from './UpdatedNewsDataInterface'
+import {CarouselCardProps} from './types'
 
 export default function CarouselCard({data, index}: CarouselCardProps) {
   return (
-    <div className='flex flex-wrap justify-center gap-5 lg:mx-4 xs:mx-1 sm:mx-2 xs:gap-2 my-4'>
-      <div className='flex xs:flex-col xs:items-center shadow-lg' key={index}>
+    <div className='flex flex-wrap justify-center gap-5 m-3'>
+      <div className='flex flex-col items-center shadow-lg' key={index}>
         <div className='w-full py-2 px-2'>
           <Image
             className='object-cover rounded-t-md'
@@ -14,16 +14,18 @@ export default function CarouselCard({data, index}: CarouselCardProps) {
             alt={data.title}
           />
         </div>
-        <div className='px-6 py-6'>
-          <h3 className='font-bold text-darkTwo xs:text-left'>{data.title}</h3>
-          <div className='flex xs:flex-col sm:flex-row items-center justify-between pt-4'>
+        <div className='xs:px-2 xs:py-4 lg:px-6 lg:py-6'>
+          <h3 className='xs:text-sm sm:text-base font-bold text-secondary text-left'>
+            {data.title}
+          </h3>
+          <div className='xs:text-xs sm:text-base flex flex-nowrap flex-row items-center justify-between pt-3'>
             <Link
               href={data.link}
-              className='text-main flex text-nowrap items-center text-sm'
+              className='xs:text-xs sm:text-sm lg:text-base text-primary flex text-nowrap items-center'
             >
               {data.ButtonText}
               <svg
-                className='w-2.5 h-2.5 ml-2 text-main xs:ml-1 sm:hidden md:block'
+                className='w-2.5 h-2.5 ml-2 text-primary xs:ml-1 sm:hidden md:block'
                 aria-hidden='true'
                 xmlns='http://www.w3.org/2000/svg'
                 fill='none'
@@ -38,9 +40,9 @@ export default function CarouselCard({data, index}: CarouselCardProps) {
                 />
               </svg>
             </Link>
-            <span className='flex text-nowrap items-center text-sm text-main gap-2'>
+            <span className='xs:text-xs sm:text-sm lg:text-base flex text-nowrap items-center text-primary gap-2'>
               <svg
-                className='w-3.5 h-3.5 ml-2 text-main sm:hidden md:block'
+                className='w-3.5 h-3.5 ml-2 text-primary sm:hidden md:block'
                 aria-hidden='true'
                 xmlns='http://www.w3.org/2000/svg'
                 fill='none'

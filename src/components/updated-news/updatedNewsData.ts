@@ -1,9 +1,13 @@
-import image1 from '../../../public/images/image-1.png'
-import image2 from '../../../public/images/image-2.png'
+import {
+  default as image1,
+  default as image4,
+} from '../../../public/images/image-1.png'
+import {
+  default as image2,
+  default as image5,
+} from '../../../public/images/image-2.png'
 import image3 from '../../../public/images/image-3.png'
-import image4 from '../../../public/images/image-1.png'
-import image5 from '../../../public/images/image-2.png'
-import {UpdatedNewsDataInterface} from './UpdatedNewsDataInterface'
+import {UpdatedNewsDataInterface} from './types'
 
 export const CarouselData: UpdatedNewsDataInterface[] = [
   {

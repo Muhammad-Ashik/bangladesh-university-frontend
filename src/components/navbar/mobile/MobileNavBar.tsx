@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const MobileNavBar = () => (
   <div className='lg:hidden flex justify-between items-center w-full'>
-    <label htmlFor='mobile-drawer' className='text-darkTwo cursor-pointer'>
+    <label htmlFor='mobile-drawer' className='text-secondary cursor-pointer'>
       <svg
         xmlns='http://www.w3.org/2000/svg'
         className='h-7 w-7'
