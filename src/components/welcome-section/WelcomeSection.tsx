@@ -4,17 +4,17 @@ import Button from '../button/Button'
 export default function WelcomeSection() {
   return (
     <div className='md:container sm:px-8 mx-auto'>
-      <div className='md:px-8 grid lg:grid-cols-3 gap-12 xs:px-5'>
-        <div className='w-full'>
+      <div className='w-full block lg:grid grid-cols-2 xl:grid-cols-3 gap-12 xs:px-5 md:px-8 '>
+        <div className='w-full xs:mb-10 lg:mb-0'>
           <Image
-            className='w-full h-full object-cover rounded-md'
+            className='w-full h-full object-cover'
             src='/images/image-2.png'
-            width='1000'
-            height='1000'
+            width={1000}
+            height={1000}
             alt='Welcome-Image'
           />
         </div>
-        <div className='flex flex-col col-span-2 gap-4'>
+        <div className='flex flex-col xl:col-span-2 gap-4'>
           <h4 className='text-xs text-primary'>knowledge meets innovation</h4>
           <h2 className='md:text-3xl xs:text-xl font-bold text-secondary'>
             Welcome To Bangladesh University

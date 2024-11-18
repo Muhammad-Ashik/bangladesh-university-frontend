@@ -4,11 +4,11 @@ export default function Button() {
   return (
     <Link
       href='#'
-      className='xs:max-w-28 md:max-w-32 lg:max-w-36 text-nowrap group text-lg py-3 px-4 xs:py-2 xs:text-sm xs:px-2 md:py-2 md:px-2 md:text-lg xl:px-4 xl:py-3 rounded-md flex items-center justify-center bg-primary text-white border border-transparent transition duration-300 ease-in-out hover:bg-white hover:text-primary hover:border-primary'
+      className='w-min flex xs:px-2 xs:py-2 md:px-4 md:py-3 text-nowrap group rounded-md bg-primary text-white border border-transparent transition duration-300 ease-in-out hover:bg-white hover:text-primary hover:border-primary'
     >
       Read More
       <svg
-        className='w-4 h-4 xs:w-2.5 xs:2.5 md:w-3 md:h-3 xl:w-4 xl:h-4 -rotate-45 text-white ml-2 transition duration-300 ease-in-out group-hover:text-primary'
+        className='w-3 h-3 mt-1 -rotate-45 text-white ml-2 transition duration-300 ease-in-out group-hover:text-primary'
         aria-hidden='true'
         xmlns='http://www.w3.org/2000/svg'
         fill='none'

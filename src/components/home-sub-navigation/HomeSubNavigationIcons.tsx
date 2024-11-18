@@ -6,7 +6,7 @@ export const LibraryIcon: FC = () => (
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 24 24'
     fill='currentColor'
-    className='w-8 h-8 text-main group-hover:text-white  '
+    className='w-8 h-8 text-primary group-hover:text-white  '
   >
     <path d='M5 3.5A1.5 1.5 0 003.5 5v12A1.5 1.5 0 005 18.5h11A2.5 2.5 0 0118.5 21v-1H5A3.5 3.5 0 011.5 16.5v-12A3.5 3.5 0 015 1h12A3.5 3.5 0 0120.5 4.5V12h-1V4.5A2.5 2.5 0 0017 2H5zm0 1H17a1.5 1.5 0 011.5 1.5v12A1.5 1.5 0 0117 19H5a.5.5 0 01-.5-.5v-12A.5.5 0 015 6zm1.5 3.5h6a.5.5 0 010 1h-6a.5.5 0 010-1z' />
   </svg>
@@ -19,7 +19,7 @@ export const LabFacilityIcon: FC = () => (
     viewBox='0 0 24 24'
     stroke-width='1.5'
     stroke='currentColor'
-    className='w-8 h-8 text-main group-hover:text-white  '
+    className='w-8 h-8 text-primary group-hover:text-white  '
   >
     <path
       strokeLinecap='round'
@@ -38,7 +38,7 @@ export const ResearchIcon: FC = () => (
     strokeWidth='2'
     strokeLinecap='round'
     strokeLinejoin='round'
-    className='w-8 h-8 text-main group-hover:text-white  '
+    className='w-8 h-8 text-primary group-hover:text-white  '
   >
     <circle cx='11' cy='11' r='8' />
     <line x1='16' y1='16' x2='20' y2='20' />
@@ -47,7 +47,7 @@ export const ResearchIcon: FC = () => (
 
 export const DigitalEducationIcon: FC = () => (
   <svg
-    className='w-8 h-8 text-main group-hover:text-white  '
+    className='w-8 h-8 text-primary group-hover:text-white  '
     aria-hidden='true'
     xmlns='http://www.w3.org/2000/svg'
     fill='none'
@@ -72,7 +72,7 @@ export const CoCurricularIcon: FC = () => (
     strokeWidth='1.5'
     strokeLinecap='round'
     strokeLinejoin='round'
-    className='w-8 h-8 text-main group-hover:text-white  '
+    className='w-8 h-8 text-primary group-hover:text-white  '
   >
     <path d='M4 4.5A2.5 2.5 0 0 1 6.5 2H20v17h-1.5a2.5 2.5 0 0 0-2.5 2.5V22H6.5A2.5 2.5 0 0 1 4 19.5V4.5ZM17 19.5V4M4 17h13' />
   </svg>
