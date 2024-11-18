@@ -2,8 +2,8 @@ import Image from 'next/image'
 
 const Footer = () => {
   return (
-    <footer className='footer bg-[#191E24] text-[#9CA2B0] flex flex-col'>
-      <div className='md:container mx-auto text-base-content py-10 px-6 md:px-0 grid grid-cols-1 md:grid-cols-4 md:gap-8 gap-16 md:justify-items-center'>
+    <footer className='footer flex flex-col bg-[#191E24] text-[#9CA2B0]'>
+      <div className='md:container mx-auto py-10 px-6 md:px-0 grid grid-cols-1 md:grid-cols-4 md:gap-8 gap-16 md:justify-items-center'>
         {/* First Column: Logo, Description, Search */}
         <div className='w-full'>
           <Image src='/images/logo.png' alt='Logo' width={100} height={100} />
