@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Button from '../button/Button'
 import Carousel from '../carousel/Carousel'
 
 const items = [
@@ -32,7 +33,7 @@ const items = [
 
 const HeroSection = () => {
   return (
-    <div className='mx-auto pb-16'>
+    <div className='mx-auto pb-16 relative'>
       <Carousel
         items={items}
         autoSlide={true}
@@ -40,6 +41,15 @@ const HeroSection = () => {
         autoSlideSpeed={1000}
         itemClassName='w-full relative h-[calc(100vh-250px)] md:h-[calc(100vh-80px)]'
       />
+      <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 xs:text-center md:text-left text-white gap-4'>
+        <h4 className='text-xs'>knowledge meets innovation</h4>
+        <h2 className='xs:pb-3 md:pb-5 pt-2 md:text-3xl xs:text-xl font-bold'>
+          The most anticipated <br /> ceremony of the Graduates
+        </h2>
+        <div className='xs:flex xs:justify-center md:justify-start'>
+          <Button ButtonText='Read More' />
+        </div>
+      </div>
     </div>
   )
 }
