@@ -35,7 +35,7 @@ export default function WelcomeSection() {
             since 2001. Bangladesh University strives to attain perfection in
             its efforts to educate the youth of Bangladesh.
           </p>
-          <Button />
+          <Button ButtonText='Read More' />
         </div>
       </div>
     </div>
