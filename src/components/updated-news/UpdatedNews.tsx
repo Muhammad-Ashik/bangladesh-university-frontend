@@ -68,7 +68,7 @@ export default function UpdatedNews() {
           ))}
         </Slider>
         <span
-          className='absolute xs:left-3  md:left-0 top-1/2 w-7 h-7 cursor-pointer flex items-center justify-center rounded-[50%] xs:bg-transparent xs:text-primary xl:bg-primary xl:text-white'
+          className='absolute xs:left-3  md:left-0 top-[48%] w-7 h-7 cursor-pointer flex items-center justify-center rounded-[50%] xs:bg-transparent xs:text-primary xl:bg-primary xl:text-white'
           onClick={goToPrev}
         >
           <svg
@@ -87,7 +87,7 @@ export default function UpdatedNews() {
           </svg>
         </span>
         <span
-          className='absolute xs:right-3 md:right-0 top-1/2 w-7 h-7 cursor-pointer flex items-center justify-center rounded-[50%] xs:bg-transparent xs:text-primary xl:bg-primary xl:text-white'
+          className='absolute xs:right-3 md:right-0 top-[48%] w-7 h-7 cursor-pointer flex items-center justify-center rounded-[50%] xs:bg-transparent xs:text-primary xl:bg-primary xl:text-white'
           onClick={goToNext}
         >
           <svg
@@ -106,7 +106,7 @@ export default function UpdatedNews() {
           </svg>
         </span>
       </div>
-      <Button />
+      <Button ButtonText='Read More' />
     </div>
   )
 }
