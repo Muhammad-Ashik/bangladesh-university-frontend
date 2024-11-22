@@ -21,3 +21,8 @@ body {
   background: var(--background);
   font-family: 'Arial', Helvetica, sans-serif; /* Ensure proper fallback */
 }
+
+footer ul li:hover {
+  color: #8c1515;
+  transition: all 1s ease-in;
+}
