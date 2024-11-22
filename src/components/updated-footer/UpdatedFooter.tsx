@@ -141,7 +141,7 @@ export default function UpdatedFooter() {
       </div>
       <div>
         <p className='border-t border-[#bcbcbc] py-5 text-center leading-8 xs:text-xs md:text-base'>
-          @2024 All rights reserved by Department of CSE, Bangladesh University
+          @2024 All rights reserved by Bangladesh University
         </p>
       </div>
     </footer>
