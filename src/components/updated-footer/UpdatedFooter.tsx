@@ -4,8 +4,8 @@ import FooterLogo from '../../../public/images/footer-logo.svg'
 
 export default function UpdatedFooter() {
   return (
-    <footer className='container mx-auto xs:px-7 lg:px-14 pt-14 bg-black text-[#ededed]'>
-      <div className='grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 space-y-6 mb-5'>
+    <footer className='container-fluid xs:px-7 lg:px-14 pt-14 bg-black text-[#ededed] m-0'>
+      <div className='container mx-auto grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 space-y-6 mb-5'>
         <div className='flex flex-col justify-start'>
           <div className='w-52 h-8 mb-6'>
             <Image
