@@ -1,27 +1,36 @@
 import Link from 'next/link'
+import { IconType } from 'react-icons'
 import { RiArrowRightSLine } from 'react-icons/ri'
 
+type ButtonProps = {
+  text?: string
+  variant?: 'fill' | 'outline' | 'flat'
+  href?: string
+  icon?: IconType
+  className?: string
+}
+
 const VARIANT_STYLES = {
-  primary: 'bg-red-700 hover:bg-red-800 text-white',
-  secondary: 'bg-red-700 hover:bg-gray-800 text-white',
+  fill: 'bg-red-700 hover:bg-red-800 text-white',
   outline:
-    'border border-red-600 text-blue-600 hover:bg-blue-600 hover:text-white',
+    'border border-red-700 text-red-700 hover:bg-red-800 hover:text-white',
+  flat: 'text-red-700 hover:text-red-800', // No border, no background, just text with hover effect
 }
 
 export default function Button({
   text = 'Read More',
-  variant = 'primary',
+  variant = 'fill',
   href = '#',
-  icon = true,
+  icon: Icon = RiArrowRightSLine, // Default icon
   className = '',
-}) {
-  const buttonClasses = `flex items-center gap-1 px-6 py-2 transition-all ${VARIANT_STYLES[variant as keyof typeof VARIANT_STYLES]} ${className}`
+}: ButtonProps) {
+  const buttonClasses = `flex items-center gap-1 px-6 py-2 transition-all ${VARIANT_STYLES[variant]} ${className}`
 
   return (
     <Link href={href} className='inline-block'>
       <div className={buttonClasses}>
         <p className='text-sm whitespace-nowrap'>{text}</p>
-        {icon && <RiArrowRightSLine size={20} />}
+        {Icon && <Icon size={20} />}
       </div>
     </Link>
   )

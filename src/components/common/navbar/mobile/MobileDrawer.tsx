@@ -54,11 +54,7 @@ const MobileDrawer = () => (
           <a>Certificate</a>
         </li>
         <li className='mt-2 w-full'>
-          <Button
-            icon={false}
-            className='h-10 justify-center'
-            text='Online Portal'
-          />
+          <Button className='h-10 justify-center' text='Online Portal' />
         </li>
         <div className='input h-10 mt-4 text-slate-500 border border-slate-400 flex items-center bg-white rounded-none mx-4'>
           <input

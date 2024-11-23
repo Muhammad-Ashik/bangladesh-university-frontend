@@ -1,5 +1,8 @@
+import Button from '@/components/reusable-ui/button/Button'
 import Image from 'next/image'
 import Link from 'next/link'
+import { GoArrowRight } from 'react-icons/go'
+import { HiOutlineSearch } from 'react-icons/hi'
 import Dropdown from '../navbar-dropdown/Dropdown'
 import { dropdownData } from '../navbarData'
 
@@ -31,33 +34,17 @@ const DesktopNavBar = () => (
         </Link>
       </li>
       <li>
-        <Link
-          href='#'
-          className='py-2 px-3 text-sm text-white bg-primary border border-transparent hover:text-primary hover:border-primary hover:bg-white'
-        >
-          Online Portal
-        </Link>
+        <Button text='Online Portal' className='gap-2' icon={GoArrowRight} />
       </li>
     </ul>
-    <label className='input h-10 input-bordered focus:!outline-none text-slate-500  border-slate-400 flex items-center gap-2 bg-white rounded-full'>
+    <div className='input h-10 rounded-full text-slate-500 border border-slate-400 flex items-center bg-white focus:outline-none'>
       <input
         type='text'
-        className='placeholder-slate-500 focus:!outline-none'
+        className='placeholder-slate-500 w-full border-none focus:outline-none'
         placeholder='Search'
       />
-      <svg
-        xmlns='http://www.w3.org/2000/svg'
-        viewBox='0 0 16 16'
-        fill='currentColor'
-        className='h-5 w-5 text-slate-500'
-      >
-        <path
-          fillRule='evenodd'
-          d='M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z'
-          clipRule='evenodd'
-        />
-      </svg>
-    </label>
+      <HiOutlineSearch size={20} />
+    </div>
   </div>
 )
 

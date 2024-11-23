@@ -70,7 +70,7 @@ export default function UpdatedNews() {
           nextIcon={<NextArrow />}
         />
       </div>
-      <Button ButtonText='Read More' />
+      <Button text='Read More' />
     </div>
   )
 }
