@@ -1,6 +1,6 @@
 import {StaticImageData} from 'next/image'
 
-export interface UpdatedNewsDataInterface {
+export interface IUpdatedNewsData {
   imageURL: StaticImageData
   title: string
   link: string
@@ -8,7 +8,7 @@ export interface UpdatedNewsDataInterface {
   date: string
 }
 
-export interface CarouselCardProps {
-  data: UpdatedNewsDataInterface
+export interface UpdatedNewsProps {
+  data: IUpdatedNewsData
   index: number
 }

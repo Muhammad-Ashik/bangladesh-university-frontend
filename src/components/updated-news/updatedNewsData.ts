@@ -7,9 +7,9 @@ import {
   default as image5,
 } from '../../../public/images/image-2.png'
 import image3 from '../../../public/images/image-3.png'
-import {UpdatedNewsDataInterface} from './types'
+import {IUpdatedNewsData} from './types'
 
-export const CarouselData: UpdatedNewsDataInterface[] = [
+export const updatedNewsData: IUpdatedNewsData[] = [
   {
     imageURL: image1,
     title: 'Introduction to JavaScript for the beginners',
