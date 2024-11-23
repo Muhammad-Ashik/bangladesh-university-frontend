@@ -1,36 +1,37 @@
 import Image from 'next/image'
+import { FaFacebook, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa'
 
 const SocialMediaLinks = ({ className = '' }) => {
   const links = [
     {
       href: 'https://www.facebook.com/BangladeshUniversityBd/',
-      src: '/images/facebook.png',
+      Icon: FaFacebook,
       alt: 'Facebook',
-      style: 'text-blue-600 hover:text-blue-700',
+      style: 'text-white hover:text-blue-700',
     },
     {
       href: 'https://twitter.com/bu_officialpage',
-      src: '/images/twitter.png',
+      Icon: FaTwitter,
       alt: 'Twitter',
-      style: 'text-blue-400 hover:text-blue-500',
+      style: 'text-white hover:text-blue-500',
     },
     {
       href: 'https://www.linkedin.com/school/bangladesh-university/',
-      src: '/images/linkedin.png',
+      Icon: FaLinkedin,
       alt: 'LinkedIn',
-      style: 'text-blue-700 hover:text-blue-800',
+      style: 'text-white hover:text-blue-500',
     },
     {
       href: 'https://www.youtube.com/@BangladeshUniversityBd',
-      src: '/images/youtube.png',
+      Icon: FaYoutube,
       alt: 'YouTube',
-      style: 'text-red-600 hover:text-red-700',
+      style: 'text-white hover:text-red-700',
     },
   ]
 
   return (
     <div className={`flex gap-8 ${className}`}>
-      {links.map(({ href, src, alt, style }) => (
+      {links.map(({ href, Icon, alt, style }) => (
         <a
           key={alt}
           href={href}
@@ -38,7 +39,7 @@ const SocialMediaLinks = ({ className = '' }) => {
           rel='noopener noreferrer'
           className={`text-xl ${style}`}
         >
-          <Image src={src} alt={alt} width={30} height={30} />
+          <Icon className='w-8 h-8' />
         </a>
       ))}
     </div>

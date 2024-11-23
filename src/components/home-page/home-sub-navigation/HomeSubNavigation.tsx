@@ -8,7 +8,7 @@ export default function HomeSubNavigation() {
         <Link
           href=''
           key={index}
-          className={`py-5 border flex flex-row sm:flex-col items-center xs:justify-center sm:justify-evenly xs:gap-4 rounded-md bg-[#F8F0F0] border-[#E8D0D0] group hover:bg-primary hover:text-white ${
+          className={`py-3 md:py-5 border flex flex-row sm:flex-col items-center xs:justify-center sm:justify-evenly xs:gap-4 rounded-md bg-[#F8F0F0] border-[#E8D0D0] group hover:bg-primary hover:text-white ${
             index === homeSubNavigationData.length - 1
               ? 'col-span-2 md:col-span-1'
               : ''
