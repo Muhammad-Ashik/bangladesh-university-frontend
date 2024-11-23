@@ -15,9 +15,9 @@ interface NavigationItem {
 
 // Data Array
 export const homeSubNavigationData: NavigationItem[] = [
-  {title: 'Library', icon: LibraryIcon},
-  {title: 'Lab Facility', icon: LabFacilityIcon},
-  {title: 'Research', icon: ResearchIcon},
-  {title: 'Education', icon: DigitalEducationIcon},
-  {title: 'Co-curricular', icon: CoCurricularIcon},
+  { title: 'Library', icon: LibraryIcon },
+  { title: 'Lab Facility', icon: LabFacilityIcon },
+  { title: 'Research', icon: ResearchIcon },
+  { title: 'Education', icon: DigitalEducationIcon },
+  { title: 'Co-curricular', icon: CoCurricularIcon },
 ]

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import {homeSubNavigationData} from './homeSubNavigationData'
+import { homeSubNavigationData } from './homeSubNavigationData'
 
 export default function HomeSubNavigation() {
   return (

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Dropdown from '../navbar-dropdown/Dropdown'
-import {dropdownData} from '../navbarData'
+import { dropdownData } from '../navbarData'
 
 const DesktopNavBar = () => (
   <div className='hidden lg:flex justify-between items-center hh-[80px]'>

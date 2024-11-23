@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function Button({ButtonText = 'Read More'}) {
+export default function Button({ ButtonText = 'Read More' }) {
   return (
     <Link
       href='#'

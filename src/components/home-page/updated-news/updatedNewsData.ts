@@ -1,4 +1,4 @@
-import {UpdatedNewsDataInterface} from './types'
+import { UpdatedNewsDataInterface } from './types'
 
 export const CarouselData: UpdatedNewsDataInterface[] = [
   {

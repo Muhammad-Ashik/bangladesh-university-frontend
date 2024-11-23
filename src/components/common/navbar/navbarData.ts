@@ -1,14 +1,14 @@
-import {DropdownProps} from './navbar-dropdown/dropdown.types'
+import { DropdownProps } from './navbar-dropdown/dropdown.types'
 
 export const dropdownData: DropdownProps[] = [
   {
     label: 'About',
     items: [
-      {name: 'About BU'},
-      {name: 'Mission & Vision'},
-      {name: 'The Founder'},
-      {name: 'The Board of Trustees'},
-      {name: 'Career'},
+      { name: 'About BU' },
+      { name: 'Mission & Vision' },
+      { name: 'The Founder' },
+      { name: 'The Board of Trustees' },
+      { name: 'Career' },
     ],
   },
   {
@@ -35,34 +35,34 @@ export const dropdownData: DropdownProps[] = [
   {
     label: 'Admission',
     items: [
-      {name: 'Academic Calendar'},
-      {name: 'Academic Policy'},
-      {name: 'Courses & Tuition Fees'},
-      {name: 'Offered Degrees'},
-      {name: 'Rules and Regulation'},
+      { name: 'Academic Calendar' },
+      { name: 'Academic Policy' },
+      { name: 'Courses & Tuition Fees' },
+      { name: 'Offered Degrees' },
+      { name: 'Rules and Regulation' },
     ],
   },
   {
     label: 'Administration',
     items: [
-      {name: 'The Vice-Chancellor'},
-      {name: 'Pro-Vice-Chancellor'},
-      {name: 'Treasurer'},
-      {name: 'Registrar Office'},
-      {name: 'Exam Control Office'},
-      {name: 'Syndicate'},
+      { name: 'The Vice-Chancellor' },
+      { name: 'Pro-Vice-Chancellor' },
+      { name: 'Treasurer' },
+      { name: 'Registrar Office' },
+      { name: 'Exam Control Office' },
+      { name: 'Syndicate' },
     ],
   },
   {
     label: 'News & Events',
     items: [
-      {name: 'All Events'},
-      {name: 'All News'},
-      {name: 'Campus Life'},
-      {name: 'Photo Gallery'},
-      {name: 'Video Gallery'},
-      {name: 'News Archive'},
-      {name: 'Convocation'},
+      { name: 'All Events' },
+      { name: 'All News' },
+      { name: 'Campus Life' },
+      { name: 'Photo Gallery' },
+      { name: 'Video Gallery' },
+      { name: 'News Archive' },
+      { name: 'Convocation' },
     ],
   },
 ]

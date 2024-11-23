@@ -1,14 +1,14 @@
 import Link from 'next/link'
 import React from 'react'
 import styles from './Dropdown.module.css'
-import {DropdownItem} from './dropdown.types'
+import { DropdownItem } from './dropdown.types'
 
 interface DropdownProps {
   label: string
   items: DropdownItem[]
 }
 
-const Dropdown: React.FC<DropdownProps> = ({label, items}) => {
+const Dropdown: React.FC<DropdownProps> = ({ label, items }) => {
   return (
     <li className={styles.relative}>
       <button className='text-secondary text-sm hover:text-primary rounded-lg py-2 inline-flex items-center'>

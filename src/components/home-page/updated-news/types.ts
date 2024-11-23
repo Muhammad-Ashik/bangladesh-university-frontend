@@ -8,7 +8,7 @@ export interface UpdatedNewsDataInterface {
   height: number
 }
 
-export interface CarouselCardProps {
+export interface UpdateNewsCardProps {
   data: UpdatedNewsDataInterface
   index: number
 }

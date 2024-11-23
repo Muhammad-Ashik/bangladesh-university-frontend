@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import {dropdownData} from '../navbarData'
+import { dropdownData } from '../navbarData'
 
 const MobileDrawer = () => (
   <div className='drawer z-10'>

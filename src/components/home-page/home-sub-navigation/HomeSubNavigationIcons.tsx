@@ -1,4 +1,4 @@
-import {FC} from 'react'
+import { FC } from 'react'
 
 // Icon Components
 export const LibraryIcon: FC = () => (

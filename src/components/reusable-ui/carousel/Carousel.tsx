@@ -1,6 +1,6 @@
 'use client'
 
-import React, {useCallback, useEffect, useRef, useState} from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 
 interface CarouselProps {
   items: React.ReactNode[]
@@ -104,7 +104,7 @@ const Carousel: React.FC<CarouselProps> = ({
           <div
             key={index}
             className='flex-shrink-0 w-full'
-            style={{pointerEvents: dragging ? 'none' : 'auto'}}
+            style={{ pointerEvents: dragging ? 'none' : 'auto' }}
           >
             <div className={`${itemClassName}`}>{item}</div>
           </div>

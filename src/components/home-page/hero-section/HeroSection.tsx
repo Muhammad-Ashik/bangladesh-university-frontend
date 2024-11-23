@@ -10,7 +10,7 @@ const items = [
       layout='fill'
       src='/images/c1.jpg'
       alt='Nature Water'
-      style={{objectFit: 'cover'}}
+      style={{ objectFit: 'cover' }}
     />
   </div>,
   <div key='nature-forest'>
@@ -18,7 +18,7 @@ const items = [
       layout='fill'
       src='/images/c2.jpg'
       alt='Nature Forest'
-      style={{objectFit: 'cover'}}
+      style={{ objectFit: 'cover' }}
     />
   </div>,
   <div key='nature-mountain'>
@@ -26,7 +26,7 @@ const items = [
       layout='fill'
       src='/images/c3.jpg'
       alt='Nature Mountain'
-      style={{objectFit: 'cover'}}
+      style={{ objectFit: 'cover' }}
     />
   </div>,
 ]

@@ -1,20 +1,18 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import {CarouselCardProps} from './types'
+import { UpdateNewsCardProps } from './types'
 
-export default function CarouselCard({data, index}: CarouselCardProps) {
+export default function UpdateNewsCard({ data, index }: UpdateNewsCardProps) {
   return (
     <div className='flex flex-wrap justify-center gap-5 mx-3 mt-3 mb-5'>
-      <div className='flex flex-col items-center shadow-lg' key={index}>
-        <div className='w-full relative rounded-t-md h-72 overflow-hidden'>
-          <Image
-            className='object-cover rounded-t-md p-2'
-            src={data.imageURL}
-            alt={data.title}
-            layout='fill'
-            objectFit='cover'
-          />
-        </div>
+      <div className='shadow-lg' key={index}>
+        <Image
+          className='p-2 w-full h-64'
+          src={data.imageURL}
+          alt={data.title}
+          width={data.width}
+          height={data.height}
+        />
         <div className='xs:px-2 xs:py-4 lg:px-6 lg:py-6'>
           <h3 className='xs:text-sm sm:text-base font-bold text-secondary text-left'>
             {data.title}
