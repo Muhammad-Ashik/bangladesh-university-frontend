@@ -19,7 +19,7 @@ export default function WelcomeSection() {
           <h2 className='md:text-3xl xs:text-xl font-bold text-secondary'>
             Welcome To Bangladesh University
           </h2>
-          <p className='xl:text-lg leading-8 text-secondary'>
+          <p className='xs:text-justify lg:text-left xl:text-lg leading-8 text-secondary'>
             Bangladesh University (BU) started its journey in 2001. Since then
             it has been providing quality higher education at a minimum cost
             especially for the financially underprivileged. For more than a
