@@ -13,7 +13,7 @@ export default function UpdateNewsCard({ data, index }: UpdateNewsCardProps) {
           width={data.width}
           height={data.height}
         />
-        <div className='xs:px-2 xs:py-4 lg:px-6 lg:py-6'>
+        <div className='xs:px-2 xs:py-4 lg:p-4'>
           <h3 className='xs:text-sm sm:text-base font-bold text-secondary text-left'>
             {data.title}
           </h3>
