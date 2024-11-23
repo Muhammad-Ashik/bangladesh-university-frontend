@@ -4,7 +4,7 @@ export default function Button({ButtonText = 'Read More'}) {
   return (
     <Link
       href='#'
-      className='w-min flex xs:px-2 xs:py-2 md:px-3 md:py-2 text-nowrap group rounded-md bg-primary text-white border border-transparent transition duration-300 ease-in-out hover:bg-white hover:text-primary hover:border-primary'
+      className='min-w-24 w-min flex xs:px-2 xs:py-2 md:px-3 md:py-2 flex-nowrap text-nowrap group rounded-md bg-primary text-white border border-transparent transition duration-300 ease-in-out hover:bg-white hover:text-primary hover:border-primary'
     >
       <p className='text-xs text-nowrap'>{ButtonText}</p>
       <svg
