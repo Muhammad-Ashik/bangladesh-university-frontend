@@ -1,5 +1,5 @@
 // src/app/layout.tsx
-import {ReactNode} from 'react'
+import { ReactNode } from 'react'
 import MainLayout from '../layouts/MainLayout'
 import './globals.css'
 
@@ -8,7 +8,7 @@ export const metadata = {
   description: 'Providing quality education and resources',
 }
 
-export default function RootLayout({children}: {children: ReactNode}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang='en'>
       <body>

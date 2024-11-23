@@ -1,9 +1,9 @@
 // src/layouts/MainLayout.tsx
-import {ReactNode} from 'react'
-import Footer from '../components/footer/Footer'
-import Navbar from '../components/navbar/Navbar'
+import Footer from '@/components/common/footer/Footer'
+import Navbar from '@/components/common/navbar/Navbar'
+import { ReactNode } from 'react'
 
-const MainLayout = ({children}: {children: ReactNode}) => {
+const MainLayout = ({ children }: { children: ReactNode }) => {
   return (
     <div className='min-h-screen'>
       <Navbar />
