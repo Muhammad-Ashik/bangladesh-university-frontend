@@ -4,7 +4,7 @@ import Dropdown from '../navbar-dropdown/Dropdown'
 import { dropdownData } from '../navbarData'
 
 const DesktopNavBar = () => (
-  <div className='hidden lg:flex justify-between items-center hh-[80px]'>
+  <div className='hidden lg:flex justify-between items-center'>
     <div className='flex items-center gap-28'>
       <Link href='/' className='w-16'>
         <Image
