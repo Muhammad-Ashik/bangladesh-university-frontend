@@ -1,11 +1,11 @@
-import {StaticImageData} from 'next/image'
-
 export interface UpdatedNewsDataInterface {
-  imageURL: StaticImageData
+  imageURL: string
   title: string
   link: string
   ButtonText: string
   date: string
+  width: number
+  height: number
 }
 
 export interface CarouselCardProps {

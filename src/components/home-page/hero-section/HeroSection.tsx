@@ -1,8 +1,8 @@
 'use client'
 
 import Image from 'next/image'
-import Button from '../button/Button'
-import Carousel from '../carousel/Carousel'
+import Button from '../../reusable-ui/button/Button'
+import Carousel from '../../reusable-ui/carousel/Carousel'
 
 const items = [
   <div key='nature-water'>

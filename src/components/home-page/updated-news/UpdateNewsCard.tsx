@@ -6,12 +6,13 @@ export default function CarouselCard({data, index}: CarouselCardProps) {
   return (
     <div className='flex flex-wrap justify-center gap-5 mx-3 mt-3 mb-5'>
       <div className='flex flex-col items-center shadow-lg' key={index}>
-        <div className='w-full py-2 px-2'>
+        <div className='w-full relative rounded-t-md h-72 overflow-hidden'>
           <Image
-            className='object-cover rounded-t-md'
+            className='object-cover rounded-t-md p-2'
             src={data.imageURL}
-            layout='responsive'
             alt={data.title}
+            layout='fill'
+            objectFit='cover'
           />
         </div>
         <div className='xs:px-2 xs:py-4 lg:px-6 lg:py-6'>

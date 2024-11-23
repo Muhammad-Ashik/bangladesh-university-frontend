@@ -3,7 +3,7 @@ import {useRef} from 'react'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
-import Button from '../button/Button'
+import Button from '../../reusable-ui/button/Button'
 import CarouselCard from './UpdateNewsCard'
 import {CarouselData} from './updatedNewsData'
 

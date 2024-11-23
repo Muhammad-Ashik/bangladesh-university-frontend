@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import styles from './Dropdown.module.css'
 import {DropdownItem} from './dropdown.types'
@@ -32,9 +33,9 @@ const Dropdown: React.FC<DropdownProps> = ({label, items}) => {
       <div className={styles.dropdownMenu}>
         <ul className={styles.dropdownList}>
           {items.map((item, index) => (
-            <li key={index} className={`${styles.dropdownItem}`}>
-              <a
-                href='#'
+            <li key={index} className={styles.dropdownItem}>
+              <Link
+                href={`/${item.name.toLowerCase().replace(/\s+/g, '-')}`}
                 className='px-4 py-1 text-sm hover:text-primary flex items-center justify-between'
               >
                 {item.name}
@@ -55,18 +56,18 @@ const Dropdown: React.FC<DropdownProps> = ({label, items}) => {
                     />
                   </svg>
                 )}
-              </a>
+              </Link>
 
               {item.subItems && (
                 <ul className={styles.subMenu}>
                   {item.subItems.map((subItem, subIndex) => (
-                    <li key={subIndex} className={`${styles.dropdownItem}`}>
-                      <a
-                        href='#'
+                    <li key={subIndex} className={styles.dropdownItem}>
+                      <Link
+                        href={`/${item.name.toLowerCase().replace(/\s+/g, '-')}/${subItem.toLowerCase().replace(/\s+/g, '-')}`}
                         className='block px-4 py-1 text-sm hover:text-primary'
                       >
                         {subItem}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

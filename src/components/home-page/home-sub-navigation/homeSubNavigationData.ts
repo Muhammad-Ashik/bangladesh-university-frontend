@@ -1,10 +1,10 @@
 import {
-  LibraryIcon,
-  LabFacilityIcon,
-  ResearchIcon,
-  DigitalEducationIcon,
   CoCurricularIcon,
-} from '@/components/icons/Icons'
+  DigitalEducationIcon,
+  LabFacilityIcon,
+  LibraryIcon,
+  ResearchIcon,
+} from '@/assets/icons/Icons'
 
 import React from 'react'
 

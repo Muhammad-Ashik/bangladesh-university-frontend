@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Button from '../button/Button'
+import Button from '../../reusable-ui/button/Button'
 
 export default function WelcomeSection() {
   return (
