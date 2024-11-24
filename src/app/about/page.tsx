@@ -1,3 +1,4 @@
+import Info from '@/components/about/Info'
 import NavigationHeader from '@/components/common/navigation-header/NavigationHeader'
 
 export default function About() {
@@ -7,6 +8,7 @@ export default function About() {
         path='Home > About'
         title='About Bangladesh University'
       />
+      <Info />
     </div>
   )
 }
