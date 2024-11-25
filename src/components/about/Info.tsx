@@ -2,7 +2,7 @@ import { infoData } from './infoData'
 
 export default function Info() {
   return (
-    <div className='max-w-[300px]'>
+    <div>
       {infoData.map((data, index) => (
         <div
           key={index}
@@ -10,7 +10,7 @@ export default function Info() {
         >
           <div className='flex justify-between items-center'>
             <h2 className='text-3xl'>{data.title}</h2>
-            <data.icon size={40} />
+            <data.icon size={30} />
           </div>
           <p className='text-sm'>{data.description}</p>
         </div>
