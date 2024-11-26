@@ -2,11 +2,11 @@ import { infoData } from './infoData'
 
 export default function Info() {
   return (
-    <div className='h-full flex flex-col items-stretch'>
+    <div className='h-full flex flex-col justify-between gap-8'>
       {infoData.map((data, index) => (
         <div
           key={index}
-          className='flex flex-col bg-primary text-white p-5 space-y-4 border border-black'
+          className='flex flex-col justify-center bg-primary text-white p-5 space-y-4 h-full border border-black'
         >
           <div className='flex justify-between items-center'>
             <h2 className='text-3xl'>{data.title}</h2>
