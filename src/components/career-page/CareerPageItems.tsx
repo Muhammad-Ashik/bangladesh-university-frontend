@@ -3,9 +3,9 @@ import { MdOutlineCalendarMonth } from 'react-icons/md'
 import Button from '../reusable-ui/button/Button'
 import { ICareerData } from './type'
 
-const CareerPageItems = ({ data, key }: ICareerData) => {
+const CareerPageItems = ({ data }: ICareerData) => {
   return (
-    <div className='bg-red-100 p-3 lg:p-6' key={key}>
+    <div className='bg-red-100 p-3 lg:p-6'>
       <span className='bg-white text-blue-600 py-1 px-2 text-sm'>
         {data.tag}
       </span>
