@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function WelcomeSection() {
   return (
-    <div className='mb-20 max-w-[1400px] w-full mx-auto flex justify-between items-center gap-6 xs:flex-wrap xs:p-4 xs:justify-center lg:p-0 xl:justify-between xl:mx-auto xl:flex-nowrap'>
+    <div className='my-20 max-w-[1400px] w-full mx-auto flex justify-between items-center gap-6 xs:flex-wrap xs:p-4 xs:justify-center lg:p-0 xl:justify-between xl:mx-auto xl:flex-nowrap'>
       {/* <div className="grid grid-cols-2 gap-4 w-full">
         <div className="py-4 bg-gray-100 grid-cols-3">
           <h2 className='text-[30px] text-darkTwo font-bold xl:text-[30px]'>
