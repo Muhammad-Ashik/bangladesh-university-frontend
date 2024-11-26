@@ -5,7 +5,7 @@ import HomeSubNavigation from '@/components/home-page/home-sub-navigation/HomeSu
 import UpdatedNews from '@/components/home-page/updated-news/UpdatedNews'
 import WelcomeSection from '@/components/home-page/welcome-section/WelcomeSection'
 
-const HomePage = () => {
+const page = () => {
   return (
     <>
       <HeroSection />
@@ -16,4 +16,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage
+export default page
