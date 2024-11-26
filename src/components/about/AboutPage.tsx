@@ -4,7 +4,7 @@ import Info from './Info'
 export default function AboutPage() {
   return (
     <div className='container max-w-[1400px] mx-auto py-14 px-5'>
-      <div className='grid grid-cols-12 md:px-5 pt-4 pb-10 xs:text-justify md:text-left md:border-b md:border-gray-400 md:mb-10'>
+      <div className='grid grid-cols-12 md:px-5 pt-4 md:pb-10 xs:text-justify md:text-left md:border-b md:border-gray-400 md:mb-10'>
         <h2 className='col-span-12 md:col-span-4 text-2xl md:text-3xl 2xl:text-4xl text-nowrap text-gray-600 xs:py-2'>
           About University
         </h2>
@@ -15,9 +15,9 @@ export default function AboutPage() {
           innovation and community for 51 years.
         </p>
       </div>
-      <div className='w-full h-auto md:h-[500px] grid md:grid-cols-12 gap-x-6 mb-10'>
+      <div className='w-full h-auto md:h-[500px] grid md:grid-cols-12 gap-y-8 gap-x-6 my-20'>
         <Image
-          className=' md:col-span-8 h-full object-cover'
+          className='md:col-span-8 h-full object-cover'
           src='/images/about-university.jpg'
           width={1000}
           height={1000}
