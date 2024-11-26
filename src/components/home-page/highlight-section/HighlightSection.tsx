@@ -1,9 +1,9 @@
 'use client'
 
 import SliderComponent from '@/components/reusable-ui/carousel/ReusableSlider'
-import { settings } from '../updated-news/settings'
 import { CarouselData } from '../updated-news/updatedNewsData'
 import HighlightCard from './HighlightCard'
+import { videoSettings } from './settings'
 
 export default function HighlightSection() {
   const renderItem = (data: any, index: number) => (
@@ -49,7 +49,7 @@ export default function HighlightSection() {
   }
 
   return (
-    <div className='md:container w-full flex flex-col items-center my-20 mx-auto md:px-5'>
+    <div className='w-full flex flex-col items-center my-20 mx-auto md:px-5'>
       <div className='p-4'>
         <h2 className='text-secondary font-bold text-center xs:text-2xl md:text-3xl'>
           Highlights
@@ -57,7 +57,7 @@ export default function HighlightSection() {
       </div>
       <div className='w-full'>
         <SliderComponent
-          settings={settings}
+          settings={videoSettings}
           data={CarouselData}
           renderItem={renderItem}
           prevIcon={<PrevArrow />}
