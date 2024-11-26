@@ -4,7 +4,7 @@ import Info from './Info'
 export default function AboutPage() {
   return (
     <div className='container max-w-[1400px] mx-auto py-14 px-5'>
-      <div className='grid grid-cols-12 px-5 pt-4 pb-10 xs:text-justify md:text-left md:border-b md:border-gray-400 md:mb-10'>
+      <div className='grid grid-cols-12 md:px-5 pt-4 pb-10 xs:text-justify md:text-left md:border-b md:border-gray-400 md:mb-10'>
         <h2 className='col-span-12 md:col-span-4 text-2xl md:text-3xl 2xl:text-4xl text-nowrap text-gray-600 xs:py-2'>
           About University
         </h2>
@@ -15,21 +15,21 @@ export default function AboutPage() {
           innovation and community for 51 years.
         </p>
       </div>
-      <div className='w-full h-[500px] flex items-center justify-center grid-cols-12 gap-x-6'>
+      <div className='w-full h-auto md:h-[500px] grid md:grid-cols-12 gap-x-6 mb-10'>
         <Image
-          className='col-span-8 h-full object-cover'
+          className=' md:col-span-8 h-full object-cover'
           src='/images/about-university.jpg'
           width={1000}
           height={1000}
           alt='About-Image'
         />
-        <div className='col-span-4'>
+        <div className='md:col-span-4'>
           <Info />
         </div>
       </div>
 
-      <div className='w-full grid grid-cols-2 gap-10 my-20'>
-        <div className='w-full border'>
+      <div className='w-full grid xs:grid-cols-1 md:grid-cols-2 gap-10'>
+        <div className='w-full'>
           <Image
             className='w-full object-cover'
             src='/images/image-4.png'
@@ -39,10 +39,10 @@ export default function AboutPage() {
           />
         </div>
         <div>
-          <h2 className='text-3xl pb-4 font-bold'>
+          <h2 className='xs:xl md:2xl xl:text-3xl pb-4 font-bold'>
             The History of Bangladesh University
           </h2>
-          <p className='text-sm lg:text-base text-gray-600 lg:leading-8'>
+          <p className='text-sm lg:text-base text-gray-600 lg:leading-8 text-justify'>
             Bangladesh University (BU) was established in 2001 under Private
             University Act, 1992 by Mr. Quazi Azher Ali, as a non-profit,
             non-political private university pioneering in computer-based
@@ -64,7 +64,7 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <div className='text-sm lg:text-base text-gray-600'>
+      <div className='text-sm lg:text-base text-gray-600 my-10'>
         <h3 className='text-2xl text-secondary font-bold'>Location:</h3>
         <p className='leading-8'>
           The permanent campus is located at 5/B, Beribandh Main Road, Adabar,
