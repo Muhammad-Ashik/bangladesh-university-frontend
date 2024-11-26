@@ -1,21 +1,21 @@
 // src/app/page.tsx
 
-import HeroSection from '@/components/hero-section/HeroSection'
-import HomeSubNavigation from '@/components/home-sub-navigation/HomeSubNavigation'
-import UpdatedNews from '@/components/updated-news/UpdatedNews'
-import WelcomeSection from '@/components/welcome-section/WelcomeSection'
 import EventAndNotice from '@/components/event-and-notice/EventAndNotice'
+import HeroSection from '@/components/home-page/hero-section/HeroSection'
+import HomeSubNavigation from '@/components/home-page/home-sub-navigation/HomeSubNavigation'
+import UpdatedNews from '@/components/home-page/updated-news/UpdatedNews'
+import WelcomeSection from '@/components/welcome-section/WelcomeSection'
 
-const HomePage = () => {
+const page = () => {
   return (
-    <div>
+    <>
       <HeroSection />
       <HomeSubNavigation />
       <WelcomeSection />
       <EventAndNotice />
       <UpdatedNews />
-    </div>
+    </>
   )
 }
 
-export default HomePage
+export default page
