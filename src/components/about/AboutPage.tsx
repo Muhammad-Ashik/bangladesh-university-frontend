@@ -18,7 +18,7 @@ export default function AboutPage() {
       <div className='w-full h-auto md:h-[500px] grid md:grid-cols-12 gap-y-8 gap-x-6 my-20'>
         <Image
           className='md:col-span-8 h-full object-cover'
-          src='/images/about-university.jpg'
+          src='/images/about/about-banner.jpg'
           width={1000}
           height={1000}
           alt='About-Image'
@@ -32,7 +32,7 @@ export default function AboutPage() {
         <div className='w-full'>
           <Image
             className='w-full object-cover'
-            src='/images/image-4.png'
+            src='/images/about/about-history.jpg'
             height={500}
             width={500}
             alt='About-Image'

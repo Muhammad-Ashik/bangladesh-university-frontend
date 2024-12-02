@@ -2,7 +2,7 @@ import { UpdatedNewsDataInterface } from './types'
 
 export const CarouselData: UpdatedNewsDataInterface[] = [
   {
-    imageURL: '/images/image-1.png',
+    imageURL: '/images/home/image-1.png',
     title: 'Introduction to JavaScript for the beginners',
     link: '#',
     ButtonText: 'Read More',
@@ -11,7 +11,7 @@ export const CarouselData: UpdatedNewsDataInterface[] = [
     height: 500,
   },
   {
-    imageURL: '/images/image-2.png',
+    imageURL: '/images/home/image-2.png',
     title: 'Introduction to JavaScript for the beginners',
     link: '#',
     ButtonText: 'Read More',
@@ -20,7 +20,7 @@ export const CarouselData: UpdatedNewsDataInterface[] = [
     height: 500,
   },
   {
-    imageURL: '/images/image-3.png',
+    imageURL: '/images/home/image-3.png',
     title: 'Introduction to JavaScript for the beginners',
     link: '#',
     ButtonText: 'Read More',
@@ -29,7 +29,7 @@ export const CarouselData: UpdatedNewsDataInterface[] = [
     height: 500,
   },
   {
-    imageURL: '/images/image-4.png',
+    imageURL: '/images/home/image-4.png',
     title: 'Introduction to JavaScript for the beginners',
     link: '#',
     ButtonText: 'Read More',
@@ -38,7 +38,7 @@ export const CarouselData: UpdatedNewsDataInterface[] = [
     height: 500,
   },
   {
-    imageURL: '/images/image-4.png',
+    imageURL: '/images/home/image-4.png',
     title: 'Introduction to JavaScript for the beginners',
     link: '#',
     ButtonText: 'Read More',
@@ -47,7 +47,7 @@ export const CarouselData: UpdatedNewsDataInterface[] = [
     height: 500,
   },
   {
-    imageURL: '/images/image-1.png',
+    imageURL: '/images/home/image-1.png',
     title: 'Introduction to JavaScript for the beginners',
     link: '#',
     ButtonText: 'Read More',
@@ -56,7 +56,7 @@ export const CarouselData: UpdatedNewsDataInterface[] = [
     height: 500,
   },
   {
-    imageURL: '/images/image-2.png',
+    imageURL: '/images/home/image-2.png',
     title: 'Introduction to JavaScript for the beginners',
     link: '#',
     ButtonText: 'Read More',
@@ -65,7 +65,7 @@ export const CarouselData: UpdatedNewsDataInterface[] = [
     height: 500,
   },
   {
-    imageURL: '/images/image-3.png',
+    imageURL: '/images/home/image-3.png',
     title: 'Introduction to JavaScript for the beginners',
     link: '#',
     ButtonText: 'Read More',
@@ -74,7 +74,7 @@ export const CarouselData: UpdatedNewsDataInterface[] = [
     height: 500,
   },
   {
-    imageURL: '/images/image-4.png',
+    imageURL: '/images/home/image-4.png',
     title: 'Introduction to JavaScript for the beginners',
     link: '#',
     ButtonText: 'Read More',
@@ -83,7 +83,7 @@ export const CarouselData: UpdatedNewsDataInterface[] = [
     height: 500,
   },
   {
-    imageURL: '/images/image-4.png',
+    imageURL: '/images/home/image-4.png',
     title: 'Introduction to JavaScript for the beginners',
     link: '#',
     ButtonText: 'Read More',

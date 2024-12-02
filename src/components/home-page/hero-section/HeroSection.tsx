@@ -7,15 +7,15 @@ import Carousel from '../../reusable-ui/carousel/Carousel'
 const HeroSection = () => {
   const items = [
     {
-      src: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      src: '/images/home/hero-1.jpg',
       alt: 'Hero 1',
     },
     {
-      src: 'https://images.unsplash.com/photo-1460518451285-97b6aa326961?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      src: '/images/home/hero-2.jpg',
       alt: 'Hero 2',
     },
     {
-      src: 'https://images.unsplash.com/photo-1497333558196-daaff02b56d0?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      src: '/images/home/hero-3.jpg',
       alt: 'Hero 3',
     },
   ]
