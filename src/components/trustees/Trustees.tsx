@@ -4,27 +4,34 @@ import { trusteesData } from './trusteesData'
 
 export default function Trustees() {
   return (
-    <div className='container w-full mx-auto flex flex-col justify-center items-center py-20'>
-      <div className='w-full max-w-[1400px] mb-20 mx-auto grid gap-x-6 gap-y-8 xs:grid-cols-1 xs:gap-x-2 sm:grid-cols-2 md:px-10 lg:grid-cols-3 2xl:px-0 2xl:grid-cols-4'>
-        {trusteesData.map((data, index) => (
-          <div className='shadow-lg rounded-lg p-3 mx-4' key={index}>
-            <div className='w-full'>
+    <div className='container mx-auto flex flex-col justify-center items-center py-20'>
+      <div className='w-full max-w-[1400px] mx-auto grid gap-6 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4'>
+        {trusteesData.map((trustee, index) => (
+          <div
+            key={index}
+            className={`shadow-lg rounded-lg p-4 ${
+              index === 0
+                ? 'col-span-full max-w-sm mx-auto' // First item takes full row but remains constrained in size
+                : 'col-span-1'
+            }`}
+          >
+            <div className='h-80 w-full overflow-hidden rounded-lg'>
               <Image
-                className='w-full xs:h-72 object-cover rounded-lg'
-                src={data.imageUrl}
-                width={500}
-                height={500}
-                alt='image-1'
+                className='w-full h-full object-cover'
+                src={trustee.imageUrl}
+                width={1000}
+                height={1000}
+                alt={`Image of ${trustee.Name}`}
               />
             </div>
-            <div>
-              <p className='text-md text-gray-600 py-2'>{data.designation}</p>
-              <h3 className='text-lg font-bold'>{data.Name}</h3>
+            <div className='mt-3'>
+              <p className='text-gray-600 text-sm'>{trustee.designation}</p>
+              <h3 className='text-lg font-bold'>{trustee.Name}</h3>
             </div>
           </div>
         ))}
       </div>
-      <Button text='Show More' />
+      <Button text='Show More' className='mt-8' />
     </div>
   )
 }

@@ -21,7 +21,7 @@ const DesktopNavBar = () => (
     </div>
     <ul className='flex items-center space-x-5 md:space-x-6'>
       <li>
-        <Link href='#' className='text-secondary text-sm hover:text-primary'>
+        <Link href='/' className='text-secondary text-sm hover:text-primary'>
           Home
         </Link>
       </li>

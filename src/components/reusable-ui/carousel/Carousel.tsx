@@ -29,21 +29,47 @@ const Carousel: React.FC<CarouselProps> = ({
   autoSlideSpeed = 500,
   itemClassName,
 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [dragging, setDragging] = useState(false)
-  const [startX, setStartX] = useState(0)
-  const [dragOffset, setDragOffset] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(1)
+  const [isTransitioning, setIsTransitioning] = useState(false)
   const containerRef = useRef<HTMLDivElement | null>(null)
 
+  const extendedItems = [items[items.length - 1], ...items, items[0]]
+
+  const totalSlides = items.length
+
   const nextSlide = useCallback(() => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length)
-  }, [items.length])
+    if (!isTransitioning) {
+      setIsTransitioning(true)
+      setCurrentIndex((prevIndex) => prevIndex + 1)
+    }
+  }, [isTransitioning])
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? items.length - 1 : prevIndex - 1,
-    )
+    if (!isTransitioning) {
+      setIsTransitioning(true)
+      setCurrentIndex((prevIndex) => prevIndex - 1)
+    }
   }
+
+  useEffect(() => {
+    if (isTransitioning) {
+      const transitionEndHandler = setTimeout(() => {
+        setIsTransitioning(false)
+
+        if (currentIndex === 0) {
+          setCurrentIndex(totalSlides)
+          containerRef.current!.style.transition = 'none'
+        } else if (currentIndex === totalSlides + 1) {
+          setCurrentIndex(1)
+          containerRef.current!.style.transition = 'none'
+        } else {
+          containerRef.current!.style.transition = `transform ${autoSlideSpeed}ms ease`
+        }
+      }, autoSlideSpeed)
+
+      return () => clearTimeout(transitionEndHandler)
+    }
+  }, [currentIndex, isTransitioning, totalSlides, autoSlideSpeed])
 
   useEffect(() => {
     if (autoSlide) {
@@ -52,131 +78,64 @@ const Carousel: React.FC<CarouselProps> = ({
     }
   }, [autoSlide, autoSlideInterval, nextSlide])
 
-  const handleDragStart = (e: React.MouseEvent | React.TouchEvent) => {
-    setDragging(true)
-    setStartX('touches' in e ? e.touches[0].clientX : e.clientX)
-  }
-
-  const handleDragMove = (e: React.MouseEvent | React.TouchEvent) => {
-    if (!dragging) return
-    const x = 'touches' in e ? e.touches[0].clientX : e.clientX
-    setDragOffset(x - startX)
-  }
-
-  const handleDragEnd = () => {
-    setDragging(false)
-    const threshold = 50
-    const direction = dragOffset > 0 ? -1 : 1
-
-    if (Math.abs(dragOffset) > threshold) {
-      if (direction === 1) {
-        nextSlide()
-      } else {
-        prevSlide()
-      }
-    }
-    setDragOffset(0)
-  }
-
   return (
-    <div
-      className='relative w-full overflow-hidden'
-      ref={containerRef}
-      onMouseDown={handleDragStart}
-      onMouseMove={handleDragMove}
-      onMouseUp={handleDragEnd}
-      onMouseLeave={handleDragEnd}
-      onTouchStart={handleDragStart}
-      onTouchMove={handleDragMove}
-      onTouchEnd={handleDragEnd}
-    >
+    <div className='relative w-full overflow-hidden' ref={containerRef}>
       <div
-        className='flex transition-transform duration-300'
+        className='flex'
         style={{
-          transform: `translateX(${
-            -currentIndex * 100 +
-            (dragOffset / (containerRef.current?.offsetWidth || 1)) * 100
-          }%)`,
-          transition: dragging ? 'none' : `transform ${autoSlideSpeed}ms ease`,
+          transform: `translateX(-${currentIndex * 100}%)`,
+          transition: isTransitioning
+            ? `transform ${autoSlideSpeed}ms ease`
+            : 'none',
         }}
       >
-        {items.map((item, index) => (
-          <div
-            key={index}
-            className='flex-shrink-0 w-full'
-            style={{ pointerEvents: dragging ? 'none' : 'auto' }}
-          >
-            <div className={`${itemClassName}`}>{item}</div>
+        {extendedItems.map((item, index) => (
+          <div key={index} className='flex-shrink-0 w-full'>
+            <div className={itemClassName}>{item}</div>
           </div>
         ))}
       </div>
 
-      {/* Conditionally render Prev Button */}
+      {/* Prev Button */}
       {!hidePrevButton &&
-        (renderPrevButton !== null ? (
-          renderPrevButton ? (
-            renderPrevButton(prevSlide)
-          ) : (
-            <button
-              onClick={prevSlide}
-              className='absolute left-4 top-1/2 -translate-y-1/2 text-white p-2 rounded-full border transition-all hover:bg-white hover:text-black'
-            >
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                viewBox='0 0 24 24'
-                fill='none'
-                stroke='currentColor'
-                strokeWidth='2'
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                className='w-6 h-6'
-              >
-                <path d='M15 18l-6-6 6-6' />
-              </svg>
-            </button>
-          )
-        ) : null)}
-
-      {/* Conditionally render Next Button */}
-      {!hideNextButton &&
-        (renderNextButton !== null ? (
-          renderNextButton ? (
-            renderNextButton(nextSlide)
-          ) : (
-            <button
-              onClick={nextSlide}
-              className='absolute right-4 top-1/2 -translate-y-1/2 text-white p-2 rounded-full border transition-all hover:bg-white hover:text-black'
-            >
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                viewBox='0 0 24 24'
-                fill='none'
-                stroke='currentColor'
-                strokeWidth='2'
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                className='w-6 h-6'
-              >
-                <path d='M9 18l6-6-6-6' />
-              </svg>
-            </button>
-          )
-        ) : null)}
-
-      <div className='absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2'>
-        {items.map((_, index) => (
-          <div key={index}>
-            {renderIndicator === null ? null : renderIndicator ? (
-              renderIndicator(currentIndex === index, index)
-            ) : (
-              <div
-                className={`h-2 ${
-                  currentIndex === index ? 'w-8' : 'opacity-40 w-4'
-                } bg-white rounded transition-all`}
-              />
-            )}
-          </div>
+        (renderPrevButton ? (
+          renderPrevButton(prevSlide)
+        ) : (
+          <button
+            onClick={prevSlide}
+            className='absolute left-4 top-1/2 -translate-y-1/2 text-white p-2 rounded-full border transition-all hover:bg-white hover:text-black'
+          >
+            Prev
+          </button>
         ))}
+
+      {/* Next Button */}
+      {!hideNextButton &&
+        (renderNextButton ? (
+          renderNextButton(nextSlide)
+        ) : (
+          <button
+            onClick={nextSlide}
+            className='absolute right-4 top-1/2 -translate-y-1/2 text-white p-2 rounded-full border transition-all hover:bg-white hover:text-black'
+          >
+            Next
+          </button>
+        ))}
+
+      {/* Indicators */}
+      <div className='absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2'>
+        {items.map((_, index) =>
+          renderIndicator ? (
+            renderIndicator(currentIndex - 1 === index, index)
+          ) : (
+            <div
+              key={index}
+              className={`h-2 ${
+                currentIndex - 1 === index ? 'w-8' : 'opacity-40 w-4'
+              } bg-white rounded transition-all`}
+            />
+          ),
+        )}
       </div>
     </div>
   )
