@@ -11,15 +11,17 @@ export default function Founder() {
         <div className='max-h-96 md:max-h-[600px] lg:col-span-2 xs:col-span-5'>
           <Image
             className='h-full object-cover'
-            src='/images/founder.jpg'
+            src='/images/founder/founder.JPG'
             width={1000}
             height={1000}
             alt='The-Founder'
           />
-          <div className='my-8 space-y-1 text-center'>
-            <h2 className='text-secondary text-2xl'>Mr. John Wick</h2>
-            <p className='text-gray-500 text-sm text-center'>
-              Founder, Bangladesh University
+          <div className='my-8 space-y-2 text-center'>
+            <h2 className='text-secondary text-2xl uppercase font-bold'>
+              QUAZI Azher Ali
+            </h2>
+            <p className='text-gray-500 text-sm text-center uppercase'>
+              Founder & First Vice-Chancellor, <br /> Bangladesh University
             </p>
           </div>
         </div>

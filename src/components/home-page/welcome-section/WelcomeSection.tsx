@@ -8,7 +8,7 @@ export default function WelcomeSection() {
         <div className='w-full xs:mb-10 lg:mb-0'>
           <Image
             className='w-full h-full object-cover'
-            src='/images/image-2.png'
+            src='/images/home/welcome-image.jpg'
             width={1000}
             height={1000}
             alt='Welcome-Image'

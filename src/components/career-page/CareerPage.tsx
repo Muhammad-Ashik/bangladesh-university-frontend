@@ -18,7 +18,7 @@ export default function CareerPage() {
       <div className='w-full mb-14'>
         <Image
           className='w-full object-cover'
-          src='/images/career-cover.png'
+          src='/images/career/career-cover.png'
           width={1000}
           height={1000}
           alt='career-cover'
