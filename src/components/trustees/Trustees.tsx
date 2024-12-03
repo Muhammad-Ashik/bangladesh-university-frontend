@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Button from '../reusable-ui/button/Button'
 import { trusteesData } from './trusteesData'
 
 export default function Trustees() {
@@ -10,8 +9,8 @@ export default function Trustees() {
           <div
             key={index}
             className={`shadow-lg rounded-lg p-4 ${
-              index === 0
-                ? 'col-span-full max-w-sm mx-auto' // First item takes full row but remains constrained in size
+              index === 0 || index === 1
+                ? 'md:col-span-full sm:col-span-1 md:w-96 mx-auto' // First item takes full row but remains constrained in size
                 : 'col-span-1'
             }`}
           >
@@ -31,7 +30,6 @@ export default function Trustees() {
           </div>
         ))}
       </div>
-      <Button text='Show More' className='mt-8' />
     </div>
   )
 }
