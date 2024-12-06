@@ -5,11 +5,12 @@ import { GoArrowRight } from 'react-icons/go'
 import { HiOutlineSearch } from 'react-icons/hi'
 import Dropdown from '../navbar-dropdown/Dropdown'
 import { dropdownData } from '../navbarData'
+import { routes } from '@/config/routes'
 
 const DesktopNavBar = () => (
   <div className='hidden lg:flex justify-between items-center'>
     <div className='flex items-center gap-28'>
-      <Link href='/' className='w-16'>
+      <Link href={routes.home} className='w-16'>
         <Image
           src='/images/logo.png'
           alt='Logo'
@@ -21,7 +22,10 @@ const DesktopNavBar = () => (
     </div>
     <ul className='flex items-center space-x-5 md:space-x-6'>
       <li>
-        <Link href='/' className='text-secondary text-sm hover:text-primary'>
+        <Link
+          href={routes.home}
+          className='text-secondary text-sm hover:text-primary'
+        >
           Home
         </Link>
       </li>

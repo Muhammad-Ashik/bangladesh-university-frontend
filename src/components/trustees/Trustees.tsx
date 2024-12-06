@@ -9,7 +9,7 @@ export default function Trustees() {
           <div
             key={index}
             className={`shadow-lg rounded-lg p-4 ${
-              index === 0 || index === 1
+              index === 0
                 ? 'md:col-span-full sm:col-span-1 md:w-96 mx-auto' // First item takes full row but remains constrained in size
                 : 'col-span-1'
             }`}

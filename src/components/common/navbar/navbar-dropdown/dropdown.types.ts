@@ -1,5 +1,6 @@
 export type DropdownItem = {
   name: string
+  link?: string
   subItems?: string[]
 }
 
