@@ -35,7 +35,7 @@ const Dropdown: React.FC<DropdownProps> = ({ label, items }) => {
           {items.map((item, index) => (
             <li key={index} className={styles.dropdownItem}>
               <Link
-                href={`/${item.name.toLowerCase().replace(/\s+/g, '-')}`}
+                href={item.link || ''}
                 className='px-4 py-1 text-sm hover:text-primary flex items-center justify-between'
               >
                 {item.name}

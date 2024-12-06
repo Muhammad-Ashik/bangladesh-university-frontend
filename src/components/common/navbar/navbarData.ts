@@ -1,14 +1,15 @@
+import { routes } from '@/config/routes'
 import { DropdownProps } from './navbar-dropdown/dropdown.types'
 
 export const dropdownData: DropdownProps[] = [
   {
     label: 'About',
     items: [
-      { name: 'About BU' },
-      { name: 'Mission & Vision' },
-      { name: 'The Founder' },
-      { name: 'The Board of Trustees' },
-      { name: 'Career' },
+      { name: 'About BU', link: routes.about },
+      { name: 'Mission & Vision', link: routes.vision },
+      { name: 'The Founder', link: routes.founder },
+      { name: 'The Board of Trustees', link: routes.trustees },
+      { name: 'Career', link: routes.career },
     ],
   },
   {
