@@ -1,7 +1,6 @@
 import { UpdateNewsCardProps } from '@/components/home-page/updated-news/types'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
 
 const RelatedEvent = ({ data, index }: UpdateNewsCardProps) => {
   return (
@@ -14,13 +13,13 @@ const RelatedEvent = ({ data, index }: UpdateNewsCardProps) => {
         height={data.height}
       />
       <div className='xs:px-2 xs:py-4 lg:p-4'>
-        <h3 className='xs:text-sm sm:text-base font-bold text-secondary text-left'>
+        <h3 className='text-14 font-bold text-secondary text-left'>
           {data.title}
         </h3>
-        <div className='xs:text-xs sm:text-base flex flex-nowrap flex-row items-center justify-between pt-3'>
+        <div className='text-16 flex flex-nowrap flex-row items-center justify-between pt-3'>
           <Link
             href={data.link}
-            className='xs:text-xs sm:text-sm lg:text-base text-primary flex text-nowrap items-center'
+            className='text-16 text-primary flex text-nowrap items-center'
           >
             {data.ButtonText}
             <svg
@@ -39,7 +38,7 @@ const RelatedEvent = ({ data, index }: UpdateNewsCardProps) => {
               />
             </svg>
           </Link>
-          <span className='xs:text-xs sm:text-sm lg:text-base flex text-nowrap items-center text-primary gap-2'>
+          <span className='text-16 flex text-nowrap items-center text-primary gap-2'>
             <svg
               className='w-3.5 h-3.5 ml-2 text-primary sm:hidden md:block'
               aria-hidden='true'

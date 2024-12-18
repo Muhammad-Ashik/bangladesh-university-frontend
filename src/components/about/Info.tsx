@@ -9,10 +9,10 @@ export default function Info() {
           className='flex flex-col justify-center bg-primary text-white p-5 space-y-4 h-full border border-black'
         >
           <div className='flex justify-between items-center'>
-            <h2 className='text-3xl'>{data.title}</h2>
+            <h2 className='text-30'>{data.title}</h2>
             <data.icon size={30} />
           </div>
-          <p className='text-sm'>{data.description}</p>
+          <p className='text-14'>{data.description}</p>
         </div>
       ))}
     </div>

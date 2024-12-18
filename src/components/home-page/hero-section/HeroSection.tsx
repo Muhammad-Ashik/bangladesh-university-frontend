@@ -38,7 +38,7 @@ const HeroSection = () => {
       />
       <div className='w-full absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 xs:text-center text-white gap-4'>
         <h4 className='md:text-md text-xs'>knowledge meets innovation</h4>
-        <h2 className='xs:pb-3 md:pb-5 pt-2 md:text-5xl font-bold'>
+        <h2 className='xs:pb-3 md:pb-5 pt-2 title-40 font-bold'>
           The most anticipated <br /> ceremony of the Graduates
         </h2>
         <div className='flex justify-center'>

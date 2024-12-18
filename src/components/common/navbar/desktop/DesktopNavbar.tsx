@@ -1,11 +1,11 @@
 import Button from '@/components/reusable-ui/button/Button'
+import { routes } from '@/config/routes'
 import Image from 'next/image'
 import Link from 'next/link'
 import { GoArrowRight } from 'react-icons/go'
 import { HiOutlineSearch } from 'react-icons/hi'
 import Dropdown from '../navbar-dropdown/Dropdown'
 import { dropdownData } from '../navbarData'
-import { routes } from '@/config/routes'
 
 const DesktopNavBar = () => (
   <div className='hidden lg:flex justify-between items-center'>
@@ -24,7 +24,7 @@ const DesktopNavBar = () => (
       <li>
         <Link
           href={routes.home}
-          className='text-secondary text-sm hover:text-primary'
+          className='text-secondary text-14 hover:text-primary'
         >
           Home
         </Link>
@@ -33,7 +33,7 @@ const DesktopNavBar = () => (
         <Dropdown key={index} label={dropdown.label} items={dropdown.items} />
       ))}
       <li>
-        <Link href='#' className='text-secondary text-sm hover:text-primary'>
+        <Link href='#' className='text-secondary text-14 hover:text-primary'>
           Certificate
         </Link>
       </li>

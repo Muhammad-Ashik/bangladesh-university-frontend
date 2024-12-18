@@ -52,7 +52,7 @@ export default function UpdatedNews() {
   return (
     <div className='md:container w-full flex flex-col items-center my-20 mx-auto md:px-5'>
       <div className='p-4'>
-        <h2 className='text-secondary font-bold text-center xs:text-2xl md:text-3xl'>
+        <h2 className='text-secondary font-bold text-center text-30'>
           Updated News
         </h2>
         <p className='py-4 text-secondary text-center'>

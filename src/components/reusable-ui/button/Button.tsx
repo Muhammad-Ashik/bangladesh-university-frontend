@@ -29,7 +29,7 @@ export default function Button({
   return (
     <Link href={href} className='inline-block'>
       <div className={buttonClasses}>
-        <p className='text-sm whitespace-nowrap'>{text}</p>
+        <p className='text-14 whitespace-nowrap'>{text}</p>
         {Icon && <Icon size={20} />}
       </div>
     </Link>

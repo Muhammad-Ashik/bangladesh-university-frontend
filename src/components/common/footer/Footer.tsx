@@ -37,7 +37,7 @@ const SocialMediaLinks = ({ className = '' }) => {
           href={href}
           target='_blank'
           rel='noopener noreferrer'
-          className={`text-xl ${style}`}
+          className={`text-20 ${style}`}
         >
           <Icon className='w-8 h-8' />
         </a>
@@ -68,14 +68,14 @@ const Footer = () => {
             className='grayscale hover:grayscale-0 transition duration-300 ease-in-out'
           />
 
-          <p className='mt-4 text-sm'>
+          <p className='mt-4 text-14'>
             We provide innovative educational solutions to help students grow
             and succeed in their academic journey.
           </p>
         </div>
 
         <div>
-          <h1 className='text-2xl font-bold'>
+          <h1 className='text-24 font-bold'>
             <span className='text-white'>Quick</span>{' '}
             <span className='text-red-500'>Links</span>
           </h1>
@@ -93,12 +93,12 @@ const Footer = () => {
         </div>
 
         <div className='md:col-span-2'>
-          <h1 className='text-2xl font-bold'>
+          <h1 className='text-24 font-bold'>
             <span className='text-white'>Contact</span>{' '}
             <span className='text-red-500'>Us</span>
           </h1>
           <div className='flex flex-col gap-6 pt-4'>
-            <p className='text-sm'>
+            <p className='text-14'>
               Feel free to reach out to us with any questions or inquiries.
             </p>
             <div className='flex gap-8'>
@@ -122,7 +122,7 @@ const Footer = () => {
         </div>
       </div>
       <div className='w-full text-center text-slate-400 p-4 border-t border-slate-700'>
-        <p className='text-sm w-full'>
+        <p className='text-14 w-full'>
           Copyright © {new Date().getFullYear()} All Rights Reserved by
           Bangladesh University
         </p>

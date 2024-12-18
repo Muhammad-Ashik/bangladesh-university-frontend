@@ -2,6 +2,7 @@
 import { ReactNode } from 'react'
 import MainLayout from '../layouts/MainLayout'
 import './globals.css'
+import './fonts.css'
 
 export const metadata = {
   title: 'Bangladesh University',

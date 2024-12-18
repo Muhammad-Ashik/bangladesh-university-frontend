@@ -17,7 +17,7 @@ export default function HomeSubNavigation() {
           <span className='xs:pb-0 pb-2 text-red-700 group-hover:text-white'>
             <data.icon className='w-8 h-8' />
           </span>
-          <p className='text-center text-nowrap text-secondary text-sm lg:text-xl group-hover:text-white'>
+          <p className='text-center text-nowrap text-secondary text-18 group-hover:text-white'>
             {data.title}
           </p>
         </Link>

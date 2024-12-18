@@ -51,7 +51,7 @@ export default function HighlightSection() {
   return (
     <div className='w-full flex flex-col items-center my-20 mx-auto md:px-5'>
       <div className='p-4'>
-        <h2 className='text-secondary font-bold text-center xs:text-2xl md:text-3xl'>
+        <h2 className='text-secondary font-bold text-center text-30'>
           Highlights
         </h2>
       </div>

@@ -24,8 +24,8 @@ export default function Trustees() {
               />
             </div>
             <div className='mt-3'>
-              <p className='text-gray-600 text-sm'>{trustee.designation}</p>
-              <h3 className='text-lg font-bold'>{trustee.Name}</h3>
+              <p className='text-gray-600 text-14'>{trustee.designation}</p>
+              <h3 className='text-18 font-bold'>{trustee.Name}</h3>
             </div>
           </div>
         ))}

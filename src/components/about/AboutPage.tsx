@@ -5,10 +5,10 @@ export default function AboutPage() {
   return (
     <div className='container max-w-[1400px] mx-auto py-14 px-5'>
       <div className='grid grid-cols-12 md:px-5 pt-4 md:pb-10 xs:text-justify md:text-left md:border-b md:border-gray-400 md:mb-10'>
-        <h2 className='col-span-12 md:col-span-4 text-2xl md:text-3xl 2xl:text-4xl text-nowrap text-gray-600 xs:py-2'>
+        <h2 className='col-span-12 md:col-span-4 title-40 text-nowrap text-gray-600 xs:py-2'>
           About University
         </h2>
-        <p className='text-sm lg:text-base text-gray-500 col-span-12 md:col-span-8 lg:col-span-7 md:border-l border-gray-400 md:pl-6'>
+        <p className='text-16 text-gray-500 col-span-12 md:col-span-8 lg:col-span-7 md:border-l border-gray-400 md:pl-6'>
           Welcome to Bangladesh University, where knowledge meets inspiration,
           and every individuals educational journey is valued. Established in
           1971 Establishment, our university has been a bastion of learning,
@@ -39,10 +39,10 @@ export default function AboutPage() {
           />
         </div>
         <div>
-          <h2 className='xs:xl md:2xl xl:text-3xl pb-4 font-bold'>
+          <h2 className='text-30 pb-4 font-bold'>
             The History of Bangladesh University
           </h2>
-          <p className='text-sm lg:text-base text-gray-600 lg:leading-8 text-justify'>
+          <p className='text-16 text-gray-600  text-justify'>
             Bangladesh University (BU) was established in 2001 under Private
             University Act, 1992 by Mr. Quazi Azher Ali, as a non-profit,
             non-political private university pioneering in computer-based
@@ -64,8 +64,8 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <div className='text-sm lg:text-base text-gray-600 my-10'>
-        <h3 className='text-2xl text-secondary font-bold'>Location:</h3>
+      <div className='text-16 text-gray-600 my-10'>
+        <h3 className='text-24 text-secondary font-bold'>Location:</h3>
         <p className='leading-8'>
           The permanent campus is located at 5/B, Beribandh Main Road, Adabar,
           Mohammadpur, Dhaka which is well connected with other parts of Dhaka
@@ -74,7 +74,7 @@ export default function AboutPage() {
           State Minister for Local Govt., Rural Development and Co-operatives on
           October 18, 2011.
         </p>
-        <h3 className='text-2xl text-secondary mt-5 font-bold'>Founder:</h3>
+        <h3 className='text-24 text-secondary mt-5 font-bold'>Founder:</h3>
         <p className='leading-8'>
           The President of the Peoples Republic of Bangladesh is the Chancellor
           of Bangladesh University (BU). He appointed Quazi Azher Ali, M.Sc.
