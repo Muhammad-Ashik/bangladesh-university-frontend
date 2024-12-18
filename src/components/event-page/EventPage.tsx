@@ -17,7 +17,7 @@ const EventPage = () => {
             <AboutEvent />
           </div>
           <div className='w-full space-y-8'>
-            <h3 className='text-4xl font-bold'>Related Event</h3>
+            <h3 className='text-40 font-bold'>Related Event</h3>
             {relatedEventData.map((data, index) => (
               <RelatedEvent data={data} key={index} index={index} />
             ))}

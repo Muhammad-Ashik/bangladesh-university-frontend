@@ -11,7 +11,7 @@ interface DropdownProps {
 const Dropdown: React.FC<DropdownProps> = ({ label, items }) => {
   return (
     <li className={styles.relative}>
-      <button className='text-secondary text-sm hover:text-primary rounded-lg py-2 inline-flex items-center'>
+      <button className='text-secondary text-14 hover:text-primary rounded-lg py-2 inline-flex items-center'>
         {label}
         <svg
           className='w-2 h-2 ml-1.5'
@@ -36,7 +36,7 @@ const Dropdown: React.FC<DropdownProps> = ({ label, items }) => {
             <li key={index} className={styles.dropdownItem}>
               <Link
                 href={item.link || ''}
-                className='px-4 py-1 text-sm hover:text-primary flex items-center justify-between'
+                className='px-4 py-1 text-14 hover:text-primary flex items-center justify-between'
               >
                 {item.name}
                 {item.subItems && (
@@ -64,7 +64,7 @@ const Dropdown: React.FC<DropdownProps> = ({ label, items }) => {
                     <li key={subIndex} className={styles.dropdownItem}>
                       <Link
                         href={`/${item.name.toLowerCase().replace(/\s+/g, '-')}/${subItem.toLowerCase().replace(/\s+/g, '-')}`}
-                        className='block px-4 py-1 text-sm hover:text-primary'
+                        className='block px-4 py-1 text-14 hover:text-primary'
                       >
                         {subItem}
                       </Link>

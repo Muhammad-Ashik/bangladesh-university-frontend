@@ -37,7 +37,7 @@ export default function VisionAndMissionItem({
               index % 2 === 0 ? 'items-end' : 'items-start'
             }`}
           >
-            <h2 className='text-2xl font-bold text-primary'>{data.title}</h2>
+            <h2 className='text-24 font-bold text-primary'>{data.title}</h2>
             <p className='w-full lg:w-1/2 pb-5 text-gray-500'>
               {data.description}
             </p>

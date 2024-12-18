@@ -13,9 +13,9 @@ const EventVenue = () => {
         />
       </div>
       <div className='py-4 px-8 bg-red-100 space-y-5'>
-        <h3 className='text-2xl my-6'>Event Venue</h3>
+        <h3 className='text-24 my-6'>Event Venue</h3>
         {eventDetails.map((data, index) => (
-          <p className='text-xl font-bold' key={index}>
+          <p className='text-20 font-bold' key={index}>
             {data.label}: <span className='font-normal'>{data.value}</span>
           </p>
         ))}

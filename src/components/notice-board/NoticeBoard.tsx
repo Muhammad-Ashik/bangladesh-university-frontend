@@ -5,7 +5,7 @@ import { noticeBoardData } from './NoticeBoardData'
 const NoticeBoard = () => {
   return (
     <div className='container max-w-[1400px] mx-auto py-14 px-5'>
-      <h2 className='text-4xl font-bold text-secondary mb-10'>Notice Board</h2>
+      <h2 className='text-40 font-bold text-secondary mb-10'>Notice Board</h2>
       <div className='w-full space-y-5 mb-10'>
         {noticeBoardData.map((data, index) => (
           <div
@@ -17,8 +17,8 @@ const NoticeBoard = () => {
                 <FaRegFilePdf className='text-red-700' />
               </span>
               <div className='pl-3 md:pl-8 space-y-2'>
-                <p className='text-sm md:text-base'>{data.title}</p>
-                <p className='text-sm md:text-base'>Date: {data.date}</p>
+                <p className='text-16'>{data.title}</p>
+                <p className='text-16'>Date: {data.date}</p>
               </div>
             </div>
             <div className='cursor-pointer'>

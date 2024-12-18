@@ -16,10 +16,10 @@ export default function WelcomeSection() {
         </div>
         <div className='flex flex-col xl:col-span-2 gap-4'>
           <h4 className='text-xs text-primary'>knowledge meets innovation</h4>
-          <h2 className='md:text-3xl xs:text-xl font-bold text-secondary'>
+          <h2 className='text-30 font-bold text-secondary'>
             Welcome To Bangladesh University
           </h2>
-          <p className='xl:text-lg leading-8 text-secondary text-justify'>
+          <p className='text-18 text-secondary text-justify'>
             Bangladesh University (BU) started its journey in 2001. Since then
             it has been providing quality higher education at a minimum cost
             especially for the financially underprivileged. For more than a
