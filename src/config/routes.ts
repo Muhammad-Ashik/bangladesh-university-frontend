@@ -8,4 +8,5 @@ export const routes = {
   career: '/career',
   calendar: '/calendar',
   courseTuitionFees: '/course-tuition-fees',
+  academicPolicies: '/academic-policies',
 }
