@@ -9,4 +9,5 @@ export const routes = {
   calendar: '/calendar',
   courseTuitionFees: '/course-tuition-fees',
   academicPolicies: '/academic-policies',
+  offeredDegrees: '/offered-degrees',
 }
