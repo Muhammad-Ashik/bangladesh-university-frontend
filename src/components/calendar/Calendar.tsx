@@ -6,7 +6,7 @@ const Calendar = () => {
       <h2 className='title-40 font-bold text-secondary mb-10 px-5 sm:px-0'>
         Notice Board
       </h2>
-      <div className='w-full space-y-5 mb-10 flex justify-center'>
+      <div className='w-full mb-10 flex justify-center'>
         <Image
           src='/images/calendar/calendar-1.png'
           width={2000}
@@ -14,7 +14,7 @@ const Calendar = () => {
           alt='calendar'
         />
       </div>
-      <div className='w-full space-y-5 mb-10 flex justify-center'>
+      <div className='w-full mb-10 flex justify-center'>
         <Image
           src='/images/calendar/calendar-2.png'
           width={2000}

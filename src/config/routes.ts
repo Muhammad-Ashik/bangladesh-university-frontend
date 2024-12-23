@@ -7,4 +7,5 @@ export const routes = {
   founder: '/founder',
   career: '/career',
   calendar: '/calendar',
+  courseTuitionFees: '/course-tuition-fees',
 }
