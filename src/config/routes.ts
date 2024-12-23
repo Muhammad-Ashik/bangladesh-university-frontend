@@ -6,4 +6,8 @@ export const routes = {
   trustees: '/trustees',
   founder: '/founder',
   career: '/career',
+  calendar: '/calendar',
+  courseTuitionFees: '/course-tuition-fees',
+  academicPolicies: '/academic-policies',
+  offeredDegrees: '/offered-degrees',
 }

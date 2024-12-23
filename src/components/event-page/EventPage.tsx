@@ -1,9 +1,9 @@
+import AboutEvent from './about-event/AboutEvent'
+import EventBanner from './event-banner/EventBanner'
+import EventSpeaker from './event-speaker/EventSpeaker'
+import EventVenue from './event-venue/EventVenue'
 import { relatedEventData } from './eventData'
 import RelatedEvent from './related-event/RelatedEvent'
-import EventSpeaker from './event-speaker/EventSpeaker'
-import AboutEvent from './about-event/AboutEvent'
-import EventVenue from './event-venue/EventVenue'
-import EventBanner from './event-banner/EventBanner'
 
 const EventPage = () => {
   return (
@@ -17,7 +17,7 @@ const EventPage = () => {
             <AboutEvent />
           </div>
           <div className='w-full space-y-8'>
-            <h3 className='text-40 font-bold'>Related Event</h3>
+            <h3 className='title-40 font-bold'>Related Event</h3>
             {relatedEventData.map((data, index) => (
               <RelatedEvent data={data} key={index} index={index} />
             ))}
