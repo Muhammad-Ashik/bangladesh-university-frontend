@@ -5,7 +5,7 @@ import { noticeBoardData } from './NoticeBoardData'
 const NoticeBoard = () => {
   return (
     <div className='container max-w-[1400px] mx-auto py-14 px-5'>
-      <h2 className='text-40 font-bold text-secondary mb-10'>Notice Board</h2>
+      <h2 className='title-40 font-bold text-secondary mb-10'>Notice Board</h2>
       <div className='w-full space-y-5 mb-10'>
         {noticeBoardData.map((data, index) => (
           <div
