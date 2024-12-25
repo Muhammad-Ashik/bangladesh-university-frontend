@@ -10,8 +10,8 @@ export default function UpdateNewsCard({ data, index }: UpdateNewsCardProps) {
           className='p-2 w-full h-64'
           src={data.imageURL}
           alt={data.title}
-          width={data.width}
-          height={data.height}
+          width={500}
+          height={500}
         />
         <div className='xs:px-2 xs:py-4 lg:p-4'>
           <h3 className='text-16 font-bold text-secondary text-left'>

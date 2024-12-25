@@ -10,4 +10,5 @@ export const routes = {
   courseTuitionFees: '/course-tuition-fees',
   academicPolicies: '/academic-policies',
   offeredDegrees: '/offered-degrees',
+  allEvents: '/all-events',
 }

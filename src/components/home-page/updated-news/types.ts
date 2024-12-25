@@ -4,8 +4,6 @@ export interface UpdatedNewsDataInterface {
   link: string
   ButtonText: string
   date: string
-  width: number
-  height: number
 }
 
 export interface UpdateNewsCardProps {

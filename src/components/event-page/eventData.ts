@@ -1,5 +1,3 @@
-import { UpdatedNewsDataInterface } from '../home-page/updated-news/types'
-
 export const countdownData = [
   { eventTime: '05', label: 'Days' },
   { eventTime: '12', label: 'Hours' },
@@ -33,23 +31,19 @@ export const aboutEventData = [
   },
 ]
 
-export const relatedEventData: UpdatedNewsDataInterface[] = [
+export const relatedEventData = [
   {
     imageURL: '/images/event/related-event-1.png',
     title: 'Edu Fest 2023: Igniting Minds Off onTransforming Lives',
-    link: '#',
-    ButtonText: 'Read More',
     date: '28 Dec,2024',
-    width: 500,
-    height: 500,
+    time: '10:30AM',
+    location: 'Mohammadpur-1207, Dhaka, Bangladesh',
   },
   {
     imageURL: '/images/event/related-event-2.png',
     title: 'Edu Fest 2023: Igniting Minds Off onTransforming Lives',
-    link: '#',
-    ButtonText: 'Read More',
     date: '28 Dec,2024',
-    width: 500,
-    height: 500,
+    time: '10:30AM',
+    location: 'Mohammadpur-1207, Dhaka, Bangladesh',
   },
 ]
