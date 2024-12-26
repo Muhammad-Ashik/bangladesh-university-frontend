@@ -13,4 +13,5 @@ export const routes = {
   allEvents: '/all-events',
   viceChancellor: '/vice-Chancellor',
   allNews: '/all-news',
+  newsDetails: '/news-details',
 }
