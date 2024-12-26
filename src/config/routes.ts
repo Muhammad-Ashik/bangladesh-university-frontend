@@ -11,4 +11,5 @@ export const routes = {
   academicPolicies: '/academic-policies',
   offeredDegrees: '/offered-degrees',
   allEvents: '/all-events',
+  viceChancellor: '/vice-Chancellor',
 }

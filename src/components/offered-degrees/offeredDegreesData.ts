@@ -14,7 +14,7 @@ export const offeredDegreesData = [
     image: '/images/offered-degrees/offered-degrees-1.png',
   },
   {
-    faculty: 'Faculty of Science, Engineering & Technology',
+    faculty: 'Faculty of Arts, Social Science & Law',
     degrees: [
       { name: 'B.Sc. in Computer Science & Engineering (CSE)', link: '#' },
       { name: 'B.Sc. in Mathematics', link: '#' },
@@ -28,7 +28,7 @@ export const offeredDegreesData = [
     image: '/images/offered-degrees/offered-degrees-2.png',
   },
   {
-    faculty: 'Faculty of Science, Engineering & Technology',
+    faculty: 'Faculty of Business Administration & Economics',
     degrees: [
       {
         name: 'Bachelor of Business Administration (B.B.A.), with majors in:',
