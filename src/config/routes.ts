@@ -14,4 +14,5 @@ export const routes = {
   viceChancellor: '/vice-Chancellor',
   allNews: '/all-news',
   newsDetails: '/news-details',
+  campusLife: '/campus-life',
 }
