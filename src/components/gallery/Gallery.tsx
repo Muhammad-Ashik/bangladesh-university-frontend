@@ -111,7 +111,6 @@ const GalleryPage = () => {
 
   return (
     <div className='p-4'>
-      {/* Photo Gallery Title and View All Button */}
       {viewAll === null && (
         <>
           <div className='flex justify-between items-center mb-4'>
@@ -120,7 +119,6 @@ const GalleryPage = () => {
           </div>
           {renderGallery(photos, 'photo')}
 
-          {/* Video Gallery Title and View All Button */}
           <div className='flex justify-between items-center mb-4 mt-8'>
             <h2 className='text-2xl font-semibold'>Video Gallery</h2>
             <Button onClick={() => handleViewAll('video')} text='view all' />
@@ -129,7 +127,6 @@ const GalleryPage = () => {
         </>
       )}
 
-      {/* If we're viewing all items, show the back button and all items */}
       {viewAll !== null && (
         <>
           <Button onClick={handleBackToGallery} className='mb-4'>
@@ -144,7 +141,6 @@ const GalleryPage = () => {
         </>
       )}
 
-      {/* Rendering Modal if any item is clicked */}
       {renderModal()}
     </div>
   )
