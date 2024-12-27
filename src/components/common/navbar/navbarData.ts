@@ -17,53 +17,89 @@ export const dropdownData: DropdownProps[] = [
     items: [
       {
         name: 'Faculty of Science, Engineering & Technology',
+        link: '/academics/faculty-of-science-engineering-and-technology',
         subItems: [
-          'Computer Science & Engineering (CSE)',
-          'Mathematics',
-          'Pharmacy',
+          {
+            name: 'Computer Science & Engineering (CSE)',
+            link: 'https://frontend-bangladesh-univarsity.vercel.app/home',
+          },
+          {
+            name: 'Mathematics',
+            link: '/academics/faculty-of-science-engineering-and-technology/mathematics',
+          },
+          {
+            name: 'Pharmacy',
+            link: '/academics/faculty-of-science-engineering-and-technology/pharmacy',
+          },
         ],
       },
       {
         name: 'Faculty of Arts, Social Science & Law',
-        subItems: ['English', 'Sociology', 'Law'],
+        link: '/academics/faculty-of-arts-social-science-and-law',
+        subItems: [
+          {
+            name: 'English',
+            link: '/academics/faculty-of-arts-social-science-and-law/english',
+          },
+          {
+            name: 'Sociology',
+            link: '/academics/faculty-of-arts-social-science-and-law/sociology',
+          },
+          {
+            name: 'Law',
+            link: '/academics/faculty-of-arts-social-science-and-law/law',
+          },
+        ],
       },
       {
         name: 'Faculty of Business Administration & Economics',
-        subItems: ['Business Administration', 'Economics'],
+        link: '/academics/faculty-of-business-administration-and-economics',
+        subItems: [
+          {
+            name: 'Business Administration',
+            link: '/academics/faculty-of-business-administration-and-economics/business-administration',
+          },
+          {
+            name: 'Economics',
+            link: '/academics/faculty-of-business-administration-and-economics/economics',
+          },
+        ],
       },
     ],
   },
   {
     label: 'Admission',
     items: [
-      { name: 'Academic Calendar' },
-      { name: 'Academic Policy' },
-      { name: 'Courses & Tuition Fees' },
-      { name: 'Offered Degrees' },
-      { name: 'Rules and Regulation' },
+      { name: 'Academic Calendar', link: routes.calendar },
+      { name: 'Academic Policy', link: routes.academicPolicies },
+      { name: 'Courses & Tuition Fees', link: routes.courseTuitionFees },
+      { name: 'Offered Degrees', link: routes.offeredDegrees },
+      { name: 'Rules and Regulation', link: '/admission/rules-and-regulation' },
     ],
   },
   {
     label: 'Administration',
     items: [
-      { name: 'The Vice-Chancellor' },
-      { name: 'Pro-Vice-Chancellor' },
-      { name: 'Treasurer' },
-      { name: 'Registrar Office' },
-      { name: 'Exam Control Office' },
-      { name: 'Syndicate' },
+      { name: 'The Vice-Chancellor', link: routes.viceChancellor },
+      { name: 'Treasurer', link: '/administration/treasurer' },
+      { name: 'Registrar Office', link: '/administration/registrar-office' },
+      {
+        name: 'Exam Control Office',
+        link: '/administration/exam-control-office',
+      },
+      { name: 'Syndicate', link: '/administration/syndicate' },
     ],
   },
   {
     label: 'News & Events',
     items: [
-      { name: 'All Events' },
-      { name: 'All News' },
-      { name: 'Campus Life' },
-      { name: 'Photo Gallery' },
-      { name: 'Video Gallery' },
-      { name: 'News Archive' },
-      { name: 'Convocation' },
+      { name: 'All Events', link: routes.allEvents },
+      { name: 'All News', link: routes.allNews },
+      { name: 'Campus Life', link: routes.campusLife },
+      { name: 'Photo Gallery', link: '/news-events/photo-gallery' },
+      { name: 'Video Gallery', link: '/news-events/video-gallery' },
+      { name: 'News Archive', link: '/news-events/news-archive' },
+      { name: 'Convocation', link: '/news-events/convocation' },
     ],
   },
 ]
