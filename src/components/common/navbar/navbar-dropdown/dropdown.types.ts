@@ -6,7 +6,7 @@ export type DropdownSubItem = {
 export type DropdownItem = {
   name: string
   link?: string
-  subItems?: DropdownSubItem[] // Updated subItems to an array of objects containing name and link
+  subItems?: DropdownSubItem[]
 }
 
 export type DropdownProps = {

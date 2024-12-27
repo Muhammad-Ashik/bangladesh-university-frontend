@@ -9,7 +9,6 @@ interface NavigationItem {
   icon: React.ComponentType<{ className?: string }>
 }
 
-// Data Array
 export const homeSubNavigationData: NavigationItem[] = [
   { title: 'Library', icon: LuBookCopy },
   { title: 'Lab Facility', icon: ImLab },

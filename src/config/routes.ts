@@ -1,4 +1,3 @@
-// src/config/routes.ts
 export const routes = {
   home: '/',
   about: '/about',
@@ -15,4 +14,5 @@ export const routes = {
   allNews: '/all-news',
   newsDetails: '/news-details',
   campusLife: '/campus-life',
+  gallery: '/gallery',
 }

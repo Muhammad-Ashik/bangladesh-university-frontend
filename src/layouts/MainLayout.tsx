@@ -1,4 +1,3 @@
-// src/layouts/MainLayout.tsx
 import Footer from '@/components/common/footer/Footer'
 import Navbar from '@/components/common/navbar/Navbar'
 import { ReactNode } from 'react'
