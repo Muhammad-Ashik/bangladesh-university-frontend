@@ -13,7 +13,7 @@ import {
   MdOutlineCloseFullscreen,
   MdPictureInPictureAlt,
 } from 'react-icons/md'
-import './video.css'
+import './Video.css'
 
 interface VideoPlayerProps {
   src?: string
