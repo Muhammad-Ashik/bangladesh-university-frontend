@@ -22,6 +22,7 @@ interface VideoPlayerProps {
   height?: string
 }
 
+// video component
 const VideoPlayer: React.FC<VideoPlayerProps> = ({
   src = 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
   poster,
