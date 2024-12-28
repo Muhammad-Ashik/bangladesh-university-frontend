@@ -29,6 +29,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [isPlaying, setIsPlaying] = useState(false)
+  const [isBuffering, setIsBuffering] = useState(false)
   const [isMuted, setIsMuted] = useState(false)
   const [isFullscreen, setIsFullscreen] = useState(false)
   const [volume, setVolume] = useState(1)
@@ -38,7 +39,6 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   const [isMobileView, setIsMobileView] = useState(false)
   const [showControls, setShowControls] = useState(false)
 
-  // Handle play/pause
   const togglePlayPause = () => {
     if (videoRef.current) {
       if (isPlaying) {
@@ -50,7 +50,29 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
     }
   }
 
-  // Handle mute/unmute
+  const handleWaiting = () => setIsBuffering(true)
+  const handlePlaying = () => setIsBuffering(false)
+  const handleSeeking = () => setIsBuffering(true)
+  const handleSeeked = () => setIsBuffering(false)
+
+  useEffect(() => {
+    const videoElement = videoRef.current
+    if (videoElement) {
+      videoElement.addEventListener('waiting', handleWaiting)
+      videoElement.addEventListener('playing', handlePlaying)
+      videoElement.addEventListener('seeking', handleSeeking)
+      videoElement.addEventListener('seeked', handleSeeked)
+    }
+    return () => {
+      if (videoElement) {
+        videoElement.removeEventListener('waiting', handleWaiting)
+        videoElement.removeEventListener('playing', handlePlaying)
+        videoElement.removeEventListener('seeking', handleSeeking)
+        videoElement.removeEventListener('seeked', handleSeeked)
+      }
+    }
+  }, [])
+
   const toggleMute = () => {
     if (videoRef.current) {
       videoRef.current.muted = !isMuted
@@ -69,11 +91,9 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
           .requestFullscreen()
           .catch((err) => console.error('Error entering fullscreen:', err))
       }
-      // The state will be updated by the 'fullscreenchange' event listener
     }
   }
 
-  // Handle volume change
   const handleVolumeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newVolume = parseFloat(event.target.value)
     if (videoRef.current) {
@@ -82,7 +102,6 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
     setVolume(newVolume)
   }
 
-  // Handle forward/backward buttons (5 seconds)
   const seekForward = () => {
     if (videoRef.current) {
       videoRef.current.currentTime += 5
@@ -95,7 +114,6 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
     }
   }
 
-  // Handle Picture-in-Picture mode
   const togglePiP = async () => {
     if (videoRef.current) {
       try {
@@ -111,11 +129,9 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
     }
   }
 
-  // Show controls when hovering
   const handleMouseEnter = () => setShowControls(true)
   const handleMouseLeave = () => setShowControls(false)
 
-  // Update current time and duration of the video
   const handleTimeUpdate = () => {
     if (videoRef.current) {
       setCurrentTime(videoRef.current.currentTime)
@@ -130,7 +146,6 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   }
 
   useEffect(() => {
-    // Update isFullscreen based on fullscreen state changes
     const handleFullscreenChange = () => {
       if (document.fullscreenElement) {
         setIsFullscreen(true)
@@ -149,14 +164,15 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   useEffect(() => {
     const videoElement = videoRef.current
 
-    const handlePiPChange = () => {
+    const handlePiPChange = (e: any): void => {
+      if (!e.pictureInPictureWindow.width) {
+        if (videoElement) {
+          videoElement.pause()
+          setIsPlaying(false)
+        }
+      }
       const isInPiP = document.pictureInPictureElement === videoElement
       setIsPiP(isInPiP)
-
-      if (!isInPiP && videoElement) {
-        // Sync the play/pause state after exiting PiP mode
-        setIsPlaying(!videoElement.paused)
-      }
     }
 
     if (videoElement) {
@@ -210,10 +226,15 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
           poster={poster}
           className='w-full h-full'
           onClick={togglePlayPause}
-          controls={false} // Remove default controls
+          controls={false}
         />
 
-        {/* Controls */}
+        {isBuffering && (
+          <div className='absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 z-20'>
+            <div className='loader'></div>
+          </div>
+        )}
+
         <div
           className={`absolute bottom-0 left-0 right-0 p-2 text-white
     ${showControls ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
@@ -224,7 +245,6 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
               'linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 80%)',
           }}
         >
-          {/* Progress Bar */}
           <input
             type='range'
             min='0'
@@ -245,8 +265,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
             <span>{new Date(duration * 1000).toISOString().substr(14, 5)}</span>
           </div>
           <div className='flex items-center justify-between w-full mt-2'>
-            <div className='flex items-center space-x-2'>
-              {/* Play/Pause Button */}
+            <div className='flex items-center'>
               <button
                 onClick={togglePlayPause}
                 className='p-2 bg-white bg-opacity-0 rounded-full hover:bg-opacity-50'
@@ -254,8 +273,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
                 {isPlaying ? <ImPause2 size={15} /> : <ImPlay3 size={15} />}
               </button>
 
-              {/* Volume Control */}
-              <div className='flex items-center space-x-2'>
+              <div className='flex items-center'>
                 <button
                   onClick={toggleMute}
                   className='p-2 bg-white bg-opacity-0 rounded-full hover:bg-opacity-50'
@@ -283,10 +301,9 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
               </div>
             </div>
 
-            <div className='flex space-x-2'>
-              {/* Forward/Backward Buttons */}
+            <div className='flex'>
               {!isMobileView && (
-                <div className='flex space-x-2'>
+                <div className='flex'>
                   <button
                     onClick={seekBackward}
                     className='p-2 bg-white bg-opacity-0 rounded-full hover:bg-opacity-50'
@@ -303,8 +320,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
                 </div>
               )}
 
-              {/* Picture-in-Picture and Full-Screen Buttons */}
-              <div className='flex space-x-2'>
+              <div className='flex'>
                 <button
                   onClick={togglePiP}
                   className='p-2 bg-white bg-opacity-0 rounded-full hover:bg-opacity-50'
