@@ -53,11 +53,14 @@ const GalleryPage = () => {
   }
 
   const handleItemClick = (index: number, type: 'photo' | 'video') => {
-    setActiveItem({ index, type })
-    setIsModalVisible(true)
-    setTimeout(() => {
-      setIsOpening(true)
-    }, 50) // Delay to allow for rendering the modal before starting the transition
+    if (type === 'photo') {
+      setActiveItem({ index, type })
+      setIsModalVisible(true)
+      setTimeout(() => {
+        setIsOpening(true)
+      }, 50) // Delay to allow for rendering the modal before starting the transition
+    }
+    // For videos, do nothing (they will play directly on click due to native video behavior)
   }
 
   const handleNextItem = () => {
@@ -89,29 +92,32 @@ const GalleryPage = () => {
     return (
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
         {itemsToRender.map((item, index) => (
-          <div
-            key={index}
-            onClick={() => handleItemClick(index, type)}
-            className='cursor-pointer transition-transform transform hover:scale-105'
-          >
+          <div key={index} className='cursor-pointer group'>
             {type === 'photo' ? (
-              <Image
-                src={item}
-                alt={`photo-${index}`}
-                width={400}
-                height={300}
-                className='w-full h-auto object-cover rounded transition-opacity duration-500 ease-in-out'
-              />
-            ) : (
-              <video
-                ref={(el) => {
-                  videoRefs.current[index] = el
-                }}
-                controls
-                className='w-full h-auto object-cover rounded transition-opacity duration-500 ease-in-out'
+              <div
+                className='overflow-hidden'
+                onClick={() => handleItemClick(index, type)} // Open modal for photos
               >
-                <source src={item} type='video/mp4' />
-              </video>
+                <Image
+                  src={item}
+                  alt={`photo-${index}`}
+                  width={400}
+                  height={300}
+                  className='w-full h-auto object-cover transform transition-transform duration-300 group-hover:scale-[1.1]'
+                />
+              </div>
+            ) : (
+              <div className='overflow-hidden'>
+                <video
+                  ref={(el) => {
+                    videoRefs.current[index] = el
+                  }}
+                  controls
+                  className='w-full h-auto'
+                >
+                  <source src={item} type='video/mp4' />
+                </video>
+              </div>
             )}
           </div>
         ))}
@@ -179,7 +185,7 @@ const GalleryPage = () => {
   }
 
   return (
-    <div className='p-4'>
+    <div className='py-16 container mx-auto'>
       {viewAll === null && (
         <>
           <div className='flex justify-between items-center mb-4'>
