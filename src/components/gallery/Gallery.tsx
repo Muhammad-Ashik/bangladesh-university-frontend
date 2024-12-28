@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useRef, useState } from 'react'
 import { GoArrowLeft, GoArrowRight } from 'react-icons/go'
 import Button from '../reusable-ui/button/Button'
+import Video from '../reusable-ui/video/Video'
 
 const GalleryPage = () => {
   const [viewAll, setViewAll] = useState<'photo' | 'video' | null>(null)
@@ -103,20 +104,12 @@ const GalleryPage = () => {
                   alt={`photo-${index}`}
                   width={400}
                   height={300}
-                  className='w-full h-auto object-cover transform transition-transform duration-300 group-hover:scale-[1.1]'
+                  className='w-full h-auto object-cover transform transition-transform duration-300 group-hover:scale-[1.3]'
                 />
               </div>
             ) : (
               <div className='overflow-hidden'>
-                <video
-                  ref={(el) => {
-                    videoRefs.current[index] = el
-                  }}
-                  controls
-                  className='w-full h-auto'
-                >
-                  <source src={item} type='video/mp4' />
-                </video>
+                <Video />
               </div>
             )}
           </div>
