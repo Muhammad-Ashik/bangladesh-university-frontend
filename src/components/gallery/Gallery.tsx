@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { GoArrowLeft, GoArrowRight } from 'react-icons/go'
 import Button from '../reusable-ui/button/Button'
 
@@ -13,6 +13,8 @@ const GalleryPage = () => {
   } | null>(null)
   const [isModalVisible, setIsModalVisible] = useState(false)
   const [isOpening, setIsOpening] = useState(false)
+
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([])
 
   const photos = Array(40).fill(
     'https://plus.unsplash.com/premium_photo-1682125773446-259ce64f9dd7',
@@ -26,6 +28,10 @@ const GalleryPage = () => {
   }
 
   const handleCloseModal = () => {
+    // Pause the video when closing the modal
+    if (activeItem?.type === 'video' && videoRefs.current[activeItem.index]) {
+      videoRefs.current[activeItem.index]?.pause()
+    }
     setIsOpening(false)
     setTimeout(() => {
       setIsModalVisible(false)
@@ -34,6 +40,10 @@ const GalleryPage = () => {
   }
 
   const handleBackToGallery = () => {
+    // Pause the video when going back to the gallery
+    if (activeItem?.type === 'video' && videoRefs.current[activeItem.index]) {
+      videoRefs.current[activeItem.index]?.pause()
+    }
     setIsOpening(false)
     setTimeout(() => {
       setIsModalVisible(false)
@@ -94,6 +104,9 @@ const GalleryPage = () => {
               />
             ) : (
               <video
+                ref={(el) => {
+                  videoRefs.current[index] = el
+                }}
                 controls
                 className='w-full h-auto object-cover rounded transition-opacity duration-500 ease-in-out'
               >
@@ -139,6 +152,9 @@ const GalleryPage = () => {
               />
             ) : (
               <video
+                ref={(el) => {
+                  videoRefs.current[index] = el
+                }}
                 controls
                 className='w-full h-auto object-contain rounded-lg'
               >
