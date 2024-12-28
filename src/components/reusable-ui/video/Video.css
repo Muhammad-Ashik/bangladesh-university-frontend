@@ -62,3 +62,67 @@
 .video-player .video-range::-ms-fill-lower {
   background: white; /* Filled progress color */
 }
+
+/* Style the volume input (volume bar) */
+
+.video-player .volume-range {
+  width: 60%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2); /* Track color */
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-appearance: none; /* Remove default styling for Safari */
+  appearance: none; /* Remove default styling */
+}
+
+/* For Chrome, Safari, and Edge */
+.video-player .volume-range::-webkit-slider-runnable-track {
+  background: rgba(255, 255, 255, 0.2); /* Track color */
+  border-radius: 5px;
+  height: 6px;
+}
+
+.video-player .volume-range::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Remove default thumb styling */
+  appearance: none;
+  width: 0; /* Hide the thumb */
+  height: 0; /* Hide the thumb */
+}
+
+.video-player .volume-range::-webkit-progress-value {
+  background: white; /* Filled progress color */
+  border-radius: 5px;
+}
+
+/* For Firefox */
+.video-player .volume-range::-moz-range-track {
+  background: rgba(255, 255, 255, 0.2); /* Track color */
+  border-radius: 5px;
+  height: 6px;
+}
+
+.video-player .volume-range::-moz-range-thumb {
+  width: 0;
+  height: 0;
+}
+
+.video-player .volume-range::-moz-progress-bar {
+  background: white; /* Filled progress color */
+  border-radius: 5px;
+}
+
+/* For IE (if needed, although not commonly used) */
+.video-player .volume-range::-ms-track {
+  background: rgba(255, 255, 255, 0.2); /* Track color */
+  border-radius: 5px;
+  height: 6px;
+}
+
+.video-player .volume-range::-ms-thumb {
+  width: 0;
+  height: 0;
+}
+
+.video-player .volume-range::-ms-fill-lower {
+  background: white; /* Filled progress color */
+}

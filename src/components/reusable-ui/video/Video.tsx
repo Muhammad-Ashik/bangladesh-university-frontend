@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { FaPlay } from 'react-icons/fa'
 import {
   ImBackward2,
   ImForward3,
@@ -22,7 +21,6 @@ interface VideoPlayerProps {
   height?: string
 }
 
-// video component
 const VideoPlayer: React.FC<VideoPlayerProps> = ({
   src = 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
   poster,
@@ -60,15 +58,18 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
     }
   }
 
-  // Handle fullscreen toggle
   const toggleFullscreen = () => {
     if (videoRef.current) {
       if (isFullscreen) {
-        document.exitFullscreen()
+        document
+          .exitFullscreen()
+          .catch((err) => console.error('Error exiting fullscreen:', err))
       } else {
-        videoRef.current.requestFullscreen()
+        videoRef.current
+          .requestFullscreen()
+          .catch((err) => console.error('Error entering fullscreen:', err))
       }
-      setIsFullscreen(!isFullscreen)
+      // The state will be updated by the 'fullscreenchange' event listener
     }
   }
 
@@ -98,14 +99,12 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   const togglePiP = async () => {
     if (videoRef.current) {
       try {
-        // If currently in PiP, exit PiP
         if (isPiP) {
           await document.exitPictureInPicture()
         } else {
-          // Request PiP mode
           await videoRef.current.requestPictureInPicture()
         }
-        setIsPiP(!isPiP) // Toggle PiP state
+        setIsPiP(!isPiP)
       } catch (error) {
         console.error('PiP mode error:', error)
       }
@@ -130,29 +129,57 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
     }
   }
 
-  // Listen for PiP mode changes and reset the state
   useEffect(() => {
-    const handlePiPChange = () => {
-      setIsPiP(document.pictureInPictureElement === videoRef.current)
+    // Update isFullscreen based on fullscreen state changes
+    const handleFullscreenChange = () => {
+      if (document.fullscreenElement) {
+        setIsFullscreen(true)
+      } else {
+        setIsFullscreen(false)
+      }
     }
 
-    // Listen for the `enter` and `exit` PiP events
-    document.addEventListener('enterpictureinpicture', handlePiPChange)
-    document.addEventListener('leavepictureinpicture', handlePiPChange)
+    document.addEventListener('fullscreenchange', handleFullscreenChange)
 
     return () => {
-      document.removeEventListener('enterpictureinpicture', handlePiPChange)
-      document.removeEventListener('leavepictureinpicture', handlePiPChange)
+      document.removeEventListener('fullscreenchange', handleFullscreenChange)
     }
   }, [])
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.addEventListener('timeupdate', handleTimeUpdate)
+    const videoElement = videoRef.current
+
+    const handlePiPChange = () => {
+      const isInPiP = document.pictureInPictureElement === videoElement
+      setIsPiP(isInPiP)
+
+      if (!isInPiP && videoElement) {
+        // Sync the play/pause state after exiting PiP mode
+        setIsPlaying(!videoElement.paused)
+      }
+    }
+
+    if (videoElement) {
+      document.addEventListener('enterpictureinpicture', handlePiPChange)
+      document.addEventListener('leavepictureinpicture', handlePiPChange)
+    }
+
+    return () => {
+      if (videoElement) {
+        document.removeEventListener('enterpictureinpicture', handlePiPChange)
+        document.removeEventListener('leavepictureinpicture', handlePiPChange)
+      }
+    }
+  }, [])
+
+  useEffect(() => {
+    const videoElement = videoRef.current
+    if (videoElement) {
+      videoElement.addEventListener('timeupdate', handleTimeUpdate)
     }
     return () => {
-      if (videoRef.current) {
-        videoRef.current.removeEventListener('timeupdate', handleTimeUpdate)
+      if (videoElement) {
+        videoElement.removeEventListener('timeupdate', handleTimeUpdate)
       }
     }
   }, [])
@@ -176,7 +203,6 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Wrapper div to contain both video and controls */}
       <div className='relative overflow-hidden rounded-lg'>
         <video
           ref={videoRef}
@@ -184,21 +210,19 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
           poster={poster}
           className='w-full h-full'
           onClick={togglePlayPause}
+          controls={false} // Remove default controls
         />
-        {/* Play/Pause Icon in Center */}
-        {!isPlaying && !isPiP && (
-          <div className='absolute inset-0 flex justify-center items-center bg-black bg-opacity-30 rounded-lg'>
-            <button onClick={togglePlayPause} className='text-white text-4xl'>
-              <FaPlay />
-            </button>
-          </div>
-        )}
+
         {/* Controls */}
         <div
-          className={`bg-black bg-opacity-30 absolute bottom-0 left-0 right-0 p-2 text-white
-            ${showControls ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
-            transition-all duration-300 ease-in-out z-10`}
-          style={{ overflow: 'hidden' }}
+          className={`absolute bottom-0 left-0 right-0 p-2 text-white
+    ${showControls ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
+    transition-all duration-300 ease-in-out z-10`}
+          style={{
+            overflow: 'hidden',
+            background:
+              'linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 80%)',
+          }}
         >
           {/* Progress Bar */}
           <input
@@ -225,7 +249,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
               {/* Play/Pause Button */}
               <button
                 onClick={togglePlayPause}
-                className='p-2 bg-white bg-opacity-10 rounded-full hover:bg-opacity-50'
+                className='p-2 bg-white bg-opacity-0 rounded-full hover:bg-opacity-50'
               >
                 {isPlaying ? <ImPause2 size={15} /> : <ImPlay3 size={15} />}
               </button>
@@ -234,7 +258,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
               <div className='flex items-center space-x-2'>
                 <button
                   onClick={toggleMute}
-                  className='p-2 bg-white bg-opacity-10 rounded-full hover:bg-opacity-50'
+                  className='p-2 bg-white bg-opacity-0 rounded-full hover:bg-opacity-50'
                 >
                   {isMuted ? (
                     <ImVolumeMute2 size={15} />
@@ -265,14 +289,14 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
                 <div className='flex space-x-2'>
                   <button
                     onClick={seekBackward}
-                    className='p-2 bg-white bg-opacity-10 rounded-full hover:bg-opacity-50'
+                    className='p-2 bg-white bg-opacity-0 rounded-full hover:bg-opacity-50'
                   >
                     <ImBackward2 size={15} />
                   </button>
 
                   <button
                     onClick={seekForward}
-                    className='p-2 bg-white bg-opacity-10 rounded-full hover:bg-opacity-50'
+                    className='p-2 bg-white bg-opacity-0 rounded-full hover:bg-opacity-50'
                   >
                     <ImForward3 size={15} />
                   </button>
@@ -283,13 +307,13 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
               <div className='flex space-x-2'>
                 <button
                   onClick={togglePiP}
-                  className='p-2 bg-white bg-opacity-10 rounded-full hover:bg-opacity-50'
+                  className='p-2 bg-white bg-opacity-0 rounded-full hover:bg-opacity-50'
                 >
                   <MdPictureInPictureAlt size={15} />
                 </button>
                 <button
                   onClick={toggleFullscreen}
-                  className='p-2 bg-white bg-opacity-10 rounded-full hover:bg-opacity-50'
+                  className='p-2 bg-white bg-opacity-0 rounded-full hover:bg-opacity-50'
                 >
                   {isFullscreen ? (
                     <MdOutlineCloseFullscreen size={15} />
