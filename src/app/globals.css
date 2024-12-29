@@ -24,17 +24,36 @@ body {
 
 /* Event CSS Start here  */
 .noticeList {
-  max-height: 350px;
+  margin-top: 15px;
+  height: 300px;
   overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #555 #eee;
 }
 .notice {
   display: flex;
 }
-.title {
+.noticeTitle {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
 
+.tab:is(.tab-active, [aria-selected='true']):not(.tab-disabled):not([disabled]),
+.tab:is(input:checked) {
+  border-color: #8c1515;
+  --tw-border-opacity: 1;
+  --tw-text-opacity: 1;
+  color: #8c1515;
+}
+
+.number {
+  /* outline */
+  -webkit-text-stroke: 1px #777;
+  -webkit-text-fill-color: transparent;
+}
+.eventItem:hover .number {
+  -webkit-text-stroke: 1px #fff !important;
+}
 /* Event CSS End here  */
