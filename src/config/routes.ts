@@ -14,6 +14,7 @@ export const routes = {
   allNews: '/all-news',
   newsDetails: '/news-details',
   campusLife: '/campus-life',
+  convocation: '/convocation',
   gallery: '/gallery',
   contactUs: '/contact-us',
 }
