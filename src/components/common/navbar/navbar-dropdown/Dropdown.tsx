@@ -35,27 +35,10 @@ const Dropdown: React.FC<DropdownProps> = ({ label, items }) => {
           {items.map((item, index) => (
             <li key={index} className={styles.dropdownItem}>
               <Link
-                href={item.link || ''}
+                href={item.link || '#'}
                 className='px-4 py-1 text-14 hover:text-primary flex items-center justify-between'
               >
                 {item.name}
-                {item.subItems && (
-                  <svg
-                    className='w-2 h-2 ml-2'
-                    aria-hidden='true'
-                    xmlns='http://www.w3.org/2000/svg'
-                    fill='none'
-                    viewBox='0 0 6 10'
-                  >
-                    <path
-                      stroke='currentColor'
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      strokeWidth='2'
-                      d='M1 1l4 4-4 4'
-                    />
-                  </svg>
-                )}
               </Link>
 
               {item.subItems && (
@@ -63,10 +46,10 @@ const Dropdown: React.FC<DropdownProps> = ({ label, items }) => {
                   {item.subItems.map((subItem, subIndex) => (
                     <li key={subIndex} className={styles.dropdownItem}>
                       <Link
-                        href={`/${item.name.toLowerCase().replace(/\s+/g, '-')}/${subItem.toLowerCase().replace(/\s+/g, '-')}`}
+                        href={subItem.link}
                         className='block px-4 py-1 text-14 hover:text-primary'
                       >
-                        {subItem}
+                        {subItem.name}
                       </Link>
                     </li>
                   ))}

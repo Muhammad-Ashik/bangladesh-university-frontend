@@ -32,22 +32,6 @@ const SliderComponent: React.FC<SliderComponentProps> = ({
     }
   }
 
-  //   Add custom dots in the slider settings
-  //   const updatedSettings: Settings = {
-  //     ...settings,
-  //     dots: true,
-  //     customPaging: (index) => (
-  //       <div className='w-2 h-2 bg-gray-400 rounded-full flex items-center justify-center cursor-pointer hover:bg-gray-600'>
-  //         <span className='sr-only'>Slide {index + 1}</span>
-  //       </div>
-  //     ),
-  //     appendDots: (dots) => (
-  //       <div className='flex justify-center items-center mt-4 space-x-2'>
-  //         {dots}
-  //       </div>
-  //     ),
-  //   }
-
   return (
     <>
       <div className='px-8 relative w-full'>

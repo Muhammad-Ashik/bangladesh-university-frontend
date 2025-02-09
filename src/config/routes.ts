@@ -1,4 +1,3 @@
-// src/config/routes.ts
 export const routes = {
   home: '/',
   about: '/about',
@@ -11,9 +10,10 @@ export const routes = {
   academicPolicies: '/academic-policies',
   offeredDegrees: '/offered-degrees',
   allEvents: '/all-events',
-  viceChancellor: '/vice-Chancellor',
+  viceChancellor: '/vice-chancellor',
   allNews: '/all-news',
   newsDetails: '/news-details',
   campusLife: '/campus-life',
   convocation: '/convocation',
+  gallery: '/gallery',
 }

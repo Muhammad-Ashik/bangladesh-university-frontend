@@ -9,9 +9,7 @@ export default function VisionAndMission() {
         Vision And Mission
       </h2>
 
-      {/* Responsive for Desktop Devices */}
       <div className='hidden sm:block w-full mx-auto relative px-6'>
-        {/* vertical line between columns */}
         <div className='absolute top-0 bottom-0 left-1/2 w-px bg-gray-300'></div>
         <div className='grid grid-cols-2 gap-8'>
           {visionAndMissionData.map((data, index) => (
@@ -20,7 +18,6 @@ export default function VisionAndMission() {
         </div>
       </div>
 
-      {/* Responsive For Mobile Size Devices */}
       <div className='block sm:hidden mx-auto px-7'>
         {visionAndMissionData.map((data, index) => (
           <div className='w-full my-10' key={index}>

@@ -1,7 +1,12 @@
+export type DropdownSubItem = {
+  name: string
+  link: string
+}
+
 export type DropdownItem = {
   name: string
   link?: string
-  subItems?: string[]
+  subItems?: DropdownSubItem[]
 }
 
 export type DropdownProps = {

@@ -1,8 +1,7 @@
-// src/app/layout.tsx
 import { ReactNode } from 'react'
 import MainLayout from '../layouts/MainLayout'
-import './globals.css'
 import './fonts.css'
+import './globals.css'
 
 export const metadata = {
   title: 'Bangladesh University',

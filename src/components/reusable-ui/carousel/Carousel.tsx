@@ -96,7 +96,6 @@ const Carousel: React.FC<CarouselProps> = ({
         ))}
       </div>
 
-      {/* Prev Button */}
       {!hidePrevButton &&
         (renderPrevButton ? (
           renderPrevButton(prevSlide)
@@ -109,7 +108,6 @@ const Carousel: React.FC<CarouselProps> = ({
           </button>
         ))}
 
-      {/* Next Button */}
       {!hideNextButton &&
         (renderNextButton ? (
           renderNextButton(nextSlide)
@@ -122,7 +120,6 @@ const Carousel: React.FC<CarouselProps> = ({
           </button>
         ))}
 
-      {/* Indicators */}
       <div className='absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2'>
         {items.map((_, index) =>
           renderIndicator ? (
