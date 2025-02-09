@@ -15,4 +15,5 @@ export const routes = {
   newsDetails: '/news-details',
   campusLife: '/campus-life',
   gallery: '/gallery',
+  contactUs: '/contact-us',
 }
