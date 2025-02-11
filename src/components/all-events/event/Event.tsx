@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import { CiCalendarDate } from 'react-icons/ci'
-import { CiLocationOn } from 'react-icons/ci'
+import Link from 'next/link'
+import { CiCalendarDate, CiLocationOn } from 'react-icons/ci'
 import { MdOutlineWatchLater } from 'react-icons/md'
 import { IEvent } from '../allEventsData'
 
@@ -27,7 +27,11 @@ const Event = ({ data, index }: IEvent) => {
           <CiLocationOn size={18} /> {data.location}
         </span>
       </div>
-      <h3 className='font-bold md:text-sm lg:text-2xl'>{data.title}</h3>
+      <Link href='/event'>
+        <h3 className='font-bold md:text-sm lg:text-2xl cursor-pointer'>
+          {data.title}
+        </h3>
+      </Link>
     </div>
   )
 }

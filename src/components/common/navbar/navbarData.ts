@@ -81,13 +81,13 @@ export const dropdownData: DropdownProps[] = [
     label: 'Administration',
     items: [
       { name: 'The Vice-Chancellor', link: routes.viceChancellor },
-      { name: 'Treasurer', link: '/administration/treasurer' },
-      { name: 'Registrar Office', link: '/administration/registrar-office' },
+      { name: 'Treasurer', link: '/treasurer' },
+      { name: 'Registrar Office', link: '/registrar-office' },
       {
         name: 'Exam Control Office',
-        link: '/administration/exam-control-office',
+        link: '/exam-control-office',
       },
-      { name: 'Syndicate', link: '/administration/syndicate' },
+      { name: 'Syndicate', link: '/syndicate' },
     ],
   },
   {
@@ -95,10 +95,24 @@ export const dropdownData: DropdownProps[] = [
     items: [
       { name: 'All Events', link: routes.allEvents },
       { name: 'All News', link: routes.allNews },
+      { name: 'Notice Board', link: routes.noticeBoard },
       { name: 'Campus Life', link: routes.campusLife },
       { name: 'Gallery', link: routes.gallery },
       { name: 'News Archive', link: '/news-events/news-archive' },
-      { name: 'Convocation', link: '/news-events/convocation' },
+      {
+        name: 'Convocation',
+        link: '/news-events/convocation',
+        subItems: [
+          {
+            name: '1st Convocation',
+            link: '/convocation',
+          },
+          {
+            name: '2nd Convocation',
+            link: '/convocation',
+          },
+        ],
+      },
     ],
   },
 ]

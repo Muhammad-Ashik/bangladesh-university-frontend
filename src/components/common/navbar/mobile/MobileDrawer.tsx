@@ -75,6 +75,11 @@ const MobileDrawer = () => {
               Certificate
             </Link>
           </li>
+          <li>
+            <Link href='/contact-us' onClick={closeDrawer}>
+              Contact
+            </Link>
+          </li>
           <li className='mt-2 w-full'>
             <Button
               className='h-10 justify-center'

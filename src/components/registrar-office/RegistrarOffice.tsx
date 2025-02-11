@@ -1,18 +1,18 @@
 import Image from 'next/image'
 import Member from '../reusable-ui/member/Member'
-import { viceChancellorData } from './viceChancellorData'
+import { registrarOfficeData } from './registrarOfficeData'
 
-export default function ViceChancellor() {
+export default function RegistrarOffice() {
   return (
     <div className='container max-w-[1400px] mx-auto py-14 p-4 sm:px-5'>
       <Image
-        src='/images/vice-chancellor/vice-chancellor-1.png'
+        src='/images/registrar-office/registrar.png'
         width={500}
         height={500}
-        alt='vice-chancellor'
+        alt='registrar'
       />
       <h2 className='title-40 font-bold text-secondary mb-10 mt-5'>
-        Message from the Vice-Chancellor
+        Message from the Registrar
       </h2>
       <div>
         <div className='text-18 text-justify sm:text-left space-y-7'>
@@ -63,13 +63,13 @@ export default function ViceChancellor() {
         </div>
         <div className='my-5 space-y-2'>
           <h3 className='font-bold'>Professor Dr. Md. Jahangir Alam</h3>
-          <p>Vice-Chancellor</p>
+          <p>Registrar</p>
           <p>Email: vc@bu.edu.bd</p>
           <p>Phone: 01755559300</p>
         </div>
       </div>
       <div className='my-28 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7'>
-        {viceChancellorData.map((data, index) => (
+        {registrarOfficeData.map((data, index) => (
           <Member data={data} index={index} key={index} />
         ))}
       </div>

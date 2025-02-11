@@ -1,4 +1,4 @@
-export const viceChancellorData = [
+export const treasurerData = [
   {
     imageUrl: '/images/vice-chancellor/vice-chancellor-2.png',
     name: 'Khandakar Shahadat Hossain',
@@ -56,3 +56,14 @@ export const viceChancellorData = [
     phone: '01755559300',
   },
 ]
+
+export interface IMemberProps {
+  data: {
+    imageUrl: string
+    name: string
+    designation: string
+    email: string
+    phone: string
+  }
+  index: number
+}
