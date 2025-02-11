@@ -1,4 +1,4 @@
-export const viceChancellorData = [
+export const syndicateData = [
   {
     imageUrl: '/images/vice-chancellor/vice-chancellor-2.png',
     name: 'Khandakar Shahadat Hossain',

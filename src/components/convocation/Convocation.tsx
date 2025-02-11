@@ -7,7 +7,7 @@ export default function Convocation() {
       <div className="relative h-screen bg-[url('/images/convocation/convocation-banner-1.JPG')] bg-cover bg-center mt-[60px]">
         <div className='absolute inset-0 bg-black opacity-60'></div>
         <div className='h-full z-10 relative flex flex-col justify-center items-center gap-y-9'>
-          <h2 className='title-60 text-white font-bold'>2nd Convocation</h2>
+          <h2 className='title-60 text-white font-bold'>Convocation</h2>
           <Button text='Apply' />
         </div>
       </div>

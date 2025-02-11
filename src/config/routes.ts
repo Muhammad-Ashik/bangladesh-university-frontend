@@ -17,4 +17,9 @@ export const routes = {
   convocation: '/convocation',
   gallery: '/gallery',
   contactUs: '/contact-us',
+  noticeBoard: '/notice-board',
+  treasurer: '/treasurer',
+  registrarOffice: '/registrar-office',
+  examControlOffice: '/exam-control-office',
+  syndicate: '/syndicate',
 }

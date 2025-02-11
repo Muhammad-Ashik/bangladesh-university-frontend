@@ -1,11 +1,19 @@
 import Image from 'next/image'
-import { IMemberProps } from '../viceChancellorData'
+
+export interface IMemberProps {
+  data: {
+    imageUrl: string
+    name: string
+    designation: string
+    email: string
+    phone: string
+  }
+  index: number
+}
 
 export default function Member({ data, index }: IMemberProps) {
   return (
-    <div
-      className={`shadow-lg rounded-md p-4 ${index === 0 ? 'md:col-span-full sm:col-span-1 md:w-96 mx-auto' : 'col-span-1'}`}
-    >
+    <div className='shadow-lg rounded-md p-4 col-span-1' key={index}>
       <Image
         src={data.imageUrl}
         width={500}

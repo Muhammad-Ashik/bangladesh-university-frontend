@@ -19,7 +19,7 @@ export default function UpdateNewsCard({ data, index }: UpdateNewsCardProps) {
           </h3>
           <div className='text-16 flex flex-nowrap flex-row items-center justify-between pt-3'>
             <Link
-              href={data.link}
+              href='/news-details'
               className='text-16 text-primary flex text-nowrap items-center'
             >
               {data.ButtonText}

@@ -38,6 +38,14 @@ const DesktopNavBar = () => (
         </Link>
       </li>
       <li>
+        <Link
+          href='/contact-us'
+          className='text-secondary text-14 hover:text-primary'
+        >
+          Contact
+        </Link>
+      </li>
+      <li>
         <Button text='Online Portal' className='gap-2' icon={GoArrowRight} />
       </li>
     </ul>
