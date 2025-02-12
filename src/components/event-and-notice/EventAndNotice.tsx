@@ -1,6 +1,3 @@
-// import Image from 'next/image'
-// import WelcomeImage from '../../../public/images/welcome-image.png'
-// import Button from '../button/Button'
 import Link from 'next/link'
 
 export default function WelcomeSection() {

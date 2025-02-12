@@ -17,9 +17,7 @@ const GalleryPage = () => {
 
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([])
 
-  const photos = Array(40).fill(
-    'https://plus.unsplash.com/premium_photo-1682125773446-259ce64f9dd7',
-  )
+  const photos = Array(40).fill('/images/demo-image.jpg')
   const videos = Array(40).fill(
     'https://videos.pexels.com/video-files/3009534/3009534-hd_1920_1080_24fps.mp4',
   )
@@ -29,7 +27,6 @@ const GalleryPage = () => {
   }
 
   const handleCloseModal = () => {
-    // Pause the video when closing the modal
     if (activeItem?.type === 'video' && videoRefs.current[activeItem.index]) {
       videoRefs.current[activeItem.index]?.pause()
     }
@@ -37,11 +34,10 @@ const GalleryPage = () => {
     setTimeout(() => {
       setIsModalVisible(false)
       setActiveItem(null)
-    }, 300) // Delay to match animation duration
+    }, 300)
   }
 
   const handleBackToGallery = () => {
-    // Pause the video when going back to the gallery
     if (activeItem?.type === 'video' && videoRefs.current[activeItem.index]) {
       videoRefs.current[activeItem.index]?.pause()
     }
@@ -50,7 +46,7 @@ const GalleryPage = () => {
       setIsModalVisible(false)
       setActiveItem(null)
       setViewAll(null)
-    }, 300) // Delay to match animation duration
+    }, 300)
   }
 
   const handleItemClick = (index: number, type: 'photo' | 'video') => {
@@ -59,9 +55,8 @@ const GalleryPage = () => {
       setIsModalVisible(true)
       setTimeout(() => {
         setIsOpening(true)
-      }, 50) // Delay to allow for rendering the modal before starting the transition
+      }, 50)
     }
-    // For videos, do nothing (they will play directly on click due to native video behavior)
   }
 
   const handleNextItem = () => {
@@ -97,7 +92,7 @@ const GalleryPage = () => {
             {type === 'photo' ? (
               <div
                 className='overflow-hidden'
-                onClick={() => handleItemClick(index, type)} // Open modal for photos
+                onClick={() => handleItemClick(index, type)}
               >
                 <Image
                   src={item}
