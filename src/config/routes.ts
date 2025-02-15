@@ -22,4 +22,6 @@ export const routes = {
   registrarOffice: '/registrar-office',
   examControlOffice: '/exam-control-office',
   syndicate: '/syndicate',
+  iqac: '/iqac',
+  rulesAndRegulation: '/rules-and-regulation',
 }

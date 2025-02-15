@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Button from '../reusable-ui/button/Button'
+import Link from 'next/link'
 
 export default function Convocation() {
   return (
@@ -8,7 +8,12 @@ export default function Convocation() {
         <div className='absolute inset-0 bg-black opacity-60'></div>
         <div className='h-full z-10 relative flex flex-col justify-center items-center gap-y-9'>
           <h2 className='title-60 text-white font-bold'>Convocation</h2>
-          <Button text='Apply' />
+          <Link
+            href='https://cse.bu.edu.bd/home'
+            className='text center z-10 text-white bg-primary px-5 py-2 rounded-md text-md border-2 border-transparent hover:border-primary hover:bg-transparent hover:text-white'
+          >
+            Apply
+          </Link>
         </div>
       </div>
       <div className='grid md:grid-cols-4 justify-center gap-8 m-10'>

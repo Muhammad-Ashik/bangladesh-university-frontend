@@ -21,7 +21,7 @@ export default function NavigationHeader({
       </div>
       <div className='w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center text-white'>
         <p className='text-18'>{path}</p>
-        <h2 className='text-30 font-bold'>{title}</h2>
+        <h2 className='text-30 font-bold text-center'>{title}</h2>
       </div>
     </div>
   )

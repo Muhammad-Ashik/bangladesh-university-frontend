@@ -74,20 +74,20 @@ export const dropdownData: DropdownProps[] = [
       { name: 'Academic Policy', link: routes.academicPolicies },
       { name: 'Courses & Tuition Fees', link: routes.courseTuitionFees },
       { name: 'Offered Degrees', link: routes.offeredDegrees },
-      { name: 'Rules and Regulation', link: '/admission/rules-and-regulation' },
+      { name: 'Rules and Regulation', link: routes.rulesAndRegulation },
     ],
   },
   {
     label: 'Administration',
     items: [
       { name: 'The Vice-Chancellor', link: routes.viceChancellor },
-      { name: 'Treasurer', link: '/treasurer' },
-      { name: 'Registrar Office', link: '/registrar-office' },
+      { name: 'Treasurer', link: routes.treasurer },
+      { name: 'Registrar Office', link: routes.registrarOffice },
       {
         name: 'Exam Control Office',
-        link: '/exam-control-office',
+        link: routes.examControlOffice,
       },
-      { name: 'Syndicate', link: '/syndicate' },
+      { name: 'Syndicate', link: routes.syndicate },
     ],
   },
   {
@@ -98,18 +98,17 @@ export const dropdownData: DropdownProps[] = [
       { name: 'Notice Board', link: routes.noticeBoard },
       { name: 'Campus Life', link: routes.campusLife },
       { name: 'Gallery', link: routes.gallery },
-      { name: 'News Archive', link: '/news-events/news-archive' },
+      { name: 'IQAC', link: routes.iqac },
       {
         name: 'Convocation',
-        link: '/news-events/convocation',
         subItems: [
           {
             name: '1st Convocation',
-            link: '/convocation',
+            link: routes.convocation,
           },
           {
             name: '2nd Convocation',
-            link: '/convocation',
+            link: routes.convocation,
           },
         ],
       },
